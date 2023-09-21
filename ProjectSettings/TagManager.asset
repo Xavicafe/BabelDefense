@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - checkpoint
+  - soldados
+  - bala
+  - disparo
+  - Altar
+  - angel
+  - Altardisp
+  - Piso2
+  - final
+  - GameMaster
+  - inicio
+  - audiosfx
+  - gigante
+  - esclavo
+  - pasaescena
+  - coin
+  - habilidades
+  - CANVAS_GAMEOVER
+  - CANVAS_TIENDA
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - mapa
+  - Water
+  - UI
+  - Post Processing
+  - torre
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Normal
+    uniqueID: 2250194825
+    locked: 0
+  - name: Estrellas
+    uniqueID: 2532507509
+    locked: 0
