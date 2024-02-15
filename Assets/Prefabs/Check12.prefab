@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 383b170b88c92a74e85a45a735eb1369, type: 3}
+    m_Font: {fileID: 12800000, guid: 6e4294854d888c84fa11ac199b1df254, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38a7dfbcd44b2c4499f2d553ef698220, type: 3}
+  m_Sprite: {fileID: 413441170, guid: a71954f5f986c4148b13a34321611b8e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -412,7 +412,7 @@ MonoBehaviour:
   panel_detras_texto: {fileID: 7578161800732049710}
   textElement: {fileID: 4245513022381117166}
   camara: {fileID: 0}
-  humos: {fileID: 866520857612240242, guid: 0c4883bcba4a8ce4b82f855261b9d484, type: 3}
+  humo: {fileID: 0}
 --- !u!1001 &4094285678660997707
 PrefabInstance:
   m_ObjectHideFlags: 0
