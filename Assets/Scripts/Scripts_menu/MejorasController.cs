@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class MejorasController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MejorasController : MonoBehaviour
     public List<GameObject> estrellas_rango;
     public List<GameObject> estrellas_daño;
     public List<GameObject> estrellas_cadencia;
+    public List<GameObject> pisos_torre;
     public int[] coste = {1,2,3,4,5};
 
 
@@ -30,10 +32,19 @@ public class MejorasController : MonoBehaviour
     public angeles sel_an;
 
     public TMP_Text Mejora1;
+    public TMP_Text Mejora1_DUR;
     public TMP_Text Mejora2;
+    public TMP_Text Mejora2_COOL;
     public TMP_Text Mejora3;
+    public TMP_Text Mejora3_Ganancia;
+    public TMP_Text Mejora3_Daño;
+    public TMP_Text Mejora3_Relen;
     public TMP_Text n_pisos;
     public GameObject comun;
+    public GameObject Name;
+    public GameObject desbloquear;
+
+    public List<GameObject> candados;
 
    
 
@@ -42,6 +53,19 @@ public class MejorasController : MonoBehaviour
     {
         pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
         camara=Camera.main;
+        ActualizarCandados();
+        
+
+    }
+
+    public void ActualizarCandados(){
+        for(int i=0 ; i<candados.Count ; i++){
+            if(pas.angeles_bloqueados[i]){
+                candados[i].SetActive(true);
+            }else{
+                candados[i].SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -66,13 +90,23 @@ public class MejorasController : MonoBehaviour
     public void Menu_selected(int index){
         Animator animator = camara.GetComponent<Animator>();
         comun.SetActive(true);
+        Name.SetActive(true);
+        text.transform.parent.gameObject.SetActive(true);
         if(index==0){
             comun.SetActive(false);
-            n_pisos.text=pas.n_pisos.ToString();
+            Name.SetActive(false);
+            text.transform.parent.gameObject.SetActive(false);
+            if(pas.n_pisos==12){
+                n_pisos.text = "MAX";
+            }else{
+                n_pisos.text=pas.n_pisos.ToString();
+            }
+            
             animator.SetInteger("Transiciones", 0);
             Setu_g.SetActive(true);
             Setu_a.SetActive(false);
             Setu_h.SetActive(false);
+            desbloquear.SetActive(false);
         }
         if(index==1){
             int indice =-1;
@@ -87,9 +121,14 @@ public class MejorasController : MonoBehaviour
                 }
             }
             sel_an.OnMouseDown(indice);
-            Mejora1.text="Rango:";
-            Mejora2.text="Daño:";
-            Mejora3.text="Cadencia:";
+            Mejora1.gameObject.SetActive(true);
+            Mejora1_DUR.gameObject.SetActive(false);
+            Mejora2.gameObject.SetActive(true);
+            Mejora2_COOL.gameObject.SetActive(false);
+            Mejora3.gameObject.SetActive(true);
+            Mejora3_Ganancia.gameObject.SetActive(false);
+            Mejora3_Relen.gameObject.SetActive(false);
+            Mejora3_Daño.gameObject.SetActive(false);
         }
         if(index==2){
             int indice =-1;
@@ -99,41 +138,57 @@ public class MejorasController : MonoBehaviour
             Setu_h.SetActive(true);
             for(int i=0;i<sel_hab.total_habilidades.Count;i++){
                 if(sel_hab.total_habilidades[i].activeSelf){
-                    indice =i;
+                    indice = i;
                     break;
                 }
             }
             sel_hab.OnMouseDown(indice);
-            Mejora1.text="Duración:";
-            Mejora2.text="Cooldown:";
+            Mejora1.gameObject.SetActive(false);
+            Mejora1_DUR.gameObject.SetActive(true);
+            Mejora2.gameObject.SetActive(false);
+            Mejora2_COOL.gameObject.SetActive(true);
             if(indice==0){
-                Mejora3.text="Ganancia:";
+                Mejora3.gameObject.SetActive(false);
+                Mejora3_Ganancia.gameObject.SetActive(true);
+                Mejora3_Relen.gameObject.SetActive(false);
+                Mejora3_Daño.gameObject.SetActive(false);
             }else if(indice==1){
-                Mejora3.text="Relentización:";
+                Mejora3.gameObject.SetActive(false);
+                Mejora3_Ganancia.gameObject.SetActive(false);
+                Mejora3_Relen.gameObject.SetActive(true);
+                Mejora3_Daño.gameObject.SetActive(false);
             }else if(indice==2){
-                Mejora3.text="Daño:";
+                Mejora3.gameObject.SetActive(false);
+                Mejora3_Ganancia.gameObject.SetActive(false);
+                Mejora3_Relen.gameObject.SetActive(false);
+                Mejora3_Daño.gameObject.SetActive(true);
             }
+            desbloquear.SetActive(false);
         }
     }
 
     public void mejorar_pisos(){
-        if(pas.n_pisos<11){
+        if(pas.n_pisos<12 && pas.experiencia>=5){
+            pisos_torre[pas.n_pisos-1].SetActive(true);
             pas.n_pisos +=1;
             n_pisos.text = pas.n_pisos.ToString();
             pas.RemoveEXP(5);
+            if(pas.n_pisos==12){
+                n_pisos.text = "MAX";
+            }
         }
-        else{n_pisos.text = "MAX";}
+        else{Debug.Log("Nivel Máximo o no tienes suficiente experiencia");}
     }
 
     public void mejorar_Rango(){
         if(Setu_a.activeSelf){
-            if (text.text=="ANGEL SIMPLE" && pas.experiencia>=coste[pas.rango_angelsimple]){
+            if (text.text=="ÁNGEL" && pas.experiencia>=coste[pas.rango_angelsimple]){
                 if (pas.rango_angelsimple<4){
                     pas.RemoveEXP(coste[pas.rango_angelsimple]);
                     pas.rango_angelsimple++;
                     estrellas_rango[pas.rango_angelsimple].SetActive(true);
                 }
-            }else if(text.text=="ARCANGEL" && pas.experiencia>=coste[pas.rango_arcangel]){
+            }else if(text.text=="ARCÁNGEL" && pas.experiencia>=coste[pas.rango_arcangel]){
                 if (pas.rango_arcangel<4){
                     pas.RemoveEXP(coste[pas.rango_arcangel]);
                     pas.rango_arcangel++;
@@ -208,13 +263,13 @@ public class MejorasController : MonoBehaviour
     }
     public void  mejorar_Daño(){
         if(Setu_a.activeSelf){
-            if (text.text=="ANGEL SIMPLE" && pas.experiencia>=coste[pas.daño_angelsimple]){
+            if (text.text=="ÁNGEL" && pas.experiencia>=coste[pas.daño_angelsimple]){
                 if (pas.daño_angelsimple<4){
                     pas.RemoveEXP(coste[pas.daño_angelsimple]);
                     pas.daño_angelsimple++;
                     estrellas_daño[pas.daño_angelsimple].SetActive(true);
                 }
-            }else if(text.text=="ARCANGEL" && pas.experiencia>=coste[pas.daño_arcangel]){
+            }else if(text.text=="ARCÁNGEL" && pas.experiencia>=coste[pas.daño_arcangel]){
                 if (pas.daño_arcangel<4){
                     pas.RemoveEXP(coste[pas.daño_arcangel]);
                     pas.daño_arcangel++;
@@ -289,13 +344,13 @@ public class MejorasController : MonoBehaviour
     }
     public void mejorar_Cadencia(){
         if(Setu_a.activeSelf){
-            if (text.text=="ANGEL SIMPLE" && pas.experiencia>=coste[pas.cadencia_angelsimple]){
+            if (text.text=="ÁNGEL" && pas.experiencia>=coste[pas.cadencia_angelsimple]){
                 if (pas.cadencia_angelsimple<4){
                     pas.RemoveEXP(coste[pas.cadencia_angelsimple]);
                     pas.cadencia_angelsimple++;
                     estrellas_cadencia[pas.cadencia_angelsimple].SetActive(true);
                 }
-            }else if(text.text=="ARCANGEL" && pas.experiencia>=coste[pas.cadencia_arcangel]){
+            }else if(text.text=="ARCÁNGEL" && pas.experiencia>=coste[pas.cadencia_arcangel]){
                 if (pas.cadencia_arcangel<4){
                     pas.RemoveEXP(coste[pas.cadencia_arcangel]);
                     pas.cadencia_arcangel++;
@@ -371,7 +426,7 @@ public class MejorasController : MonoBehaviour
     public void RESETEXP(){
         if(Setu_a.activeSelf){
             Reset();
-            if (text.text=="ANGEL SIMPLE"){
+            if (text.text=="ÁNGEL"){
                 int exp = 0;
                 for(int i=0;i<pas.rango_angelsimple;i++){
                 exp += coste[i];
@@ -388,7 +443,7 @@ public class MejorasController : MonoBehaviour
                 pas.daño_angelsimple=0;
                 pas.cadencia_angelsimple=0;
             }
-            else if(text.text=="ARCANGEL"){
+            else if(text.text=="ARCÁNGEL"){
                 int exp = 0;
                 for(int i=0;i<pas.rango_arcangel;i++){
                 exp += coste[i];

@@ -16,9 +16,19 @@ public class Shop : MonoBehaviour
 
 	BuildManager buildManager;
 
+	public bool traspasa = false;
+
 	void Start()
 	{
 		buildManager = BuildManager.instance;
+	}
+
+	public void traspasa_false(){
+		
+		traspasa=false;
+	}
+	public void traspasa_true(){
+		traspasa=true;
 	}
 
 	public void SelectAngel()

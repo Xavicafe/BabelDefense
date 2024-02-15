@@ -14,6 +14,7 @@ public class giro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         transform.Rotate(Vector3.forward, velocidadRotacion * Time.deltaTime);
     }
 }

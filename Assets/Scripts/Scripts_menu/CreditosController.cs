@@ -10,6 +10,7 @@ public class CreditosController : MonoBehaviour
     public AudioSource audiosource;
     public AudioClip botonvolver;
     public static bool CreditosActivos;
+    public float dur_credits;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +24,7 @@ public class CreditosController : MonoBehaviour
     {
        if(Input.GetKeyDown(KeyCode.Escape) && creditos_activos)
         {
-            canvas_creditos.SetActive(false);
-            creditos_activos = false;
-            CreditosActivos = false;
-            audiosource.PlayOneShot(botonvolver);
+            cerrar_creditos();
         } 
     }
 
@@ -36,4 +34,12 @@ public class CreditosController : MonoBehaviour
         creditos_activos = true;
         CreditosActivos = true;
     }
+
+    public void cerrar_creditos(){
+        canvas_creditos.SetActive(false);
+        creditos_activos = false;
+        CreditosActivos = false;
+        audiosource.PlayOneShot(botonvolver);
+    }
+
 }

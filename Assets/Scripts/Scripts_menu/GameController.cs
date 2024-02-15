@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private bool juegoActivo; //Si es true, el juego est� activo. Si no, est� a false
-    private bool menuPausaActivo; //Si es true, el menu de pausa est� activo. Si no, est� a false
+    public bool menuPausaActivo; //Si es true, el menu de pausa est� activo. Si no, est� a false
     public GameObject canvas_interfaz;
 
     public AudioSource audiosource;
@@ -67,6 +67,7 @@ public class GameController : MonoBehaviour
             //El juego est� activo
             Time.timeScale = 1f;
             canvas_interfaz.SetActive(false);
+            menuPausaActivo = false;
         }
 
         if (!juegoActivo)
@@ -75,6 +76,7 @@ public class GameController : MonoBehaviour
             //El juego no est� activo
             Time.timeScale = 0f;
             canvas_interfaz.SetActive(true);
+            menuPausaActivo = true;
         }
     }
 

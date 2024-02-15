@@ -20,5 +20,6 @@ public class PlayerStats : MonoBehaviour
 		Vidas = VidasIniciales;
 		Piso = 0;
 		Ronda = 0;
+		
 	}
 }

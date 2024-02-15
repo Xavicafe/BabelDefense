@@ -23,6 +23,8 @@ TagManager:
   - habilidades
   - CANVAS_GAMEOVER
   - CANVAS_TIENDA
+  - HUMO
+  - PANELTIENDA
   layers:
   - Default
   - TransparentFX

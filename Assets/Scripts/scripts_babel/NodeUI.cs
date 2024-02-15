@@ -19,11 +19,15 @@ public class NodeUI : MonoBehaviour
 	public Image imagen;
 	public TMP_Text nombre;
 	private AngelWrapper datosAngel;
-	private GameObject angel;
+	public GameObject angel;
 
 	public List<GameObject> estrellas_cadencia;
 	public List<GameObject> estrellas_daño;
 	public List<GameObject> estrellas_rango;
+
+	public List<GameObject> candados_cadencia;
+	public List<GameObject> candados_daño;
+	public List<GameObject> candados_rango;
 	private PassaEscenas pas;
 
 	void Start(){
@@ -36,12 +40,12 @@ public class NodeUI : MonoBehaviour
 		altarObjetivo = target;
 		datosAngel = altarObjetivo.angelWrapper;
 		transform.position = altarObjetivo.transform.position + new Vector3(0,10,0);
-		imagen.sprite=datosAngel.logo;
 		nombre.text=datosAngel.prefab.GetComponent<angel>().Name;
 		/*textoPropiedades.text = "Dato: " + datosAngel.Daño +  "\n Velocidad de ataque: " + datosAngel.VelocidadDeAtaque
 							+ "\n Daño mejorado: " + datosAngel.DañoMejorado + "\n Velocidad de ataque mejorada: " + datosAngel.VelocidadDeAtaqueMejorada+
 							 "\n Daño en Area: " + datosAngel.DañoDeArea + "\n Slow: " + datosAngel.Slow;*/
 		Adaptar();
+		Ajustar_Candados();
 		if (!altarObjetivo.isUpgraded)
         {
             upgradeCost.text = datosAngel.upgradeCost.ToString();
@@ -81,6 +85,35 @@ public class NodeUI : MonoBehaviour
             estrellas_daño[i].SetActive(false);
             estrellas_cadencia[i].SetActive(false);
         }
+	}
+	private void Reset_Candados(){
+		for(int i=0;i<=3;i++){
+           candados_rango[i].SetActive(false);
+            candados_daño[i].SetActive(false);
+            candados_cadencia[i].SetActive(false);
+        }
+	}
+
+	private void Ajustar_Candados(){
+		Reset_Candados();
+		int i=4;
+		int j=4;
+		int z=4;
+		while(i>angel.GetComponent<angel>().cadencia){
+			candados_cadencia[i-1].SetActive(true);
+			if(i==1){break;}
+			i--;
+		}
+		while(j>angel.GetComponent<angel>().rango){
+			candados_rango[j-1].SetActive(true);
+			if(j==1){break;}
+			j--;
+		}
+		while(z>angel.GetComponent<angel>().daño){
+			candados_daño[z-1].SetActive(true);
+			if(z==1){break;}
+			z--;
+		}
 	}
 
 	private void Adaptar(){

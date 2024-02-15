@@ -21,17 +21,25 @@ public class Altar : MonoBehaviour
 
     SFXController controladorSFX;
 
+    public GameController gm;
+
+    public Shop shop;
+    bool puede = false;
+
     void Start()
     {
+        shop = GameObject.FindGameObjectWithTag("PANELTIENDA").GetComponent<Shop>();
         transform.LookAt(centro_torre);
         rend = this.GetComponent<Renderer>();
         buildManager = BuildManager.instance;
-        startColor = rend.material.color;
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameController>();
     }
 
     private void OnMouseEnter()
     {
+        
         transform.localScale += new Vector3(0.025F, 0.025F, 0.025F);
+
     }
     private void OnMouseExit()
     {
@@ -39,6 +47,10 @@ public class Altar : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if(shop.traspasa){
+            Debug.Log(shop.traspasa);
+            return;
+        }
         if (angel != null)
         {
             buildManager.SelectAltar(this);
@@ -48,6 +60,7 @@ public class Altar : MonoBehaviour
         {
             return;
         }
+        if(gm.menuPausaActivo){return;}
         ContruirAngel();
     }
     public void ContruirAngel()

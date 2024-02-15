@@ -16,6 +16,8 @@ public class TutorialController : MonoBehaviour
 
     SFXController controladorSFX;
 
+    private float TimeScaleAnt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,7 @@ public class TutorialController : MonoBehaviour
             if (estadoTutorial == 1)
             {
                 canvas.SetActive(false);
-                Time.timeScale = 1f;
+                Time.timeScale = TimeScaleAnt;
                 StartCoroutine(SegundaPantalla());
             }
         }
@@ -48,7 +50,7 @@ public class TutorialController : MonoBehaviour
             if (estadoTutorial == 2)
             {
                 canvas2.SetActive(false);
-                Time.timeScale = 1f;
+                Time.timeScale = TimeScaleAnt;
                 StartCoroutine(TerceraPantalla());
             }
         }
@@ -59,7 +61,7 @@ public class TutorialController : MonoBehaviour
             if (estadoTutorial == 3)
             {
                 canvas3.SetActive(false);
-                Time.timeScale = 1f;
+                Time.timeScale = TimeScaleAnt;
                 StartCoroutine(CuartaPantalla());
             }
         }
@@ -70,7 +72,7 @@ public class TutorialController : MonoBehaviour
             if (estadoTutorial == 4)
             {
                 canvas4.SetActive(false);
-                Time.timeScale = 1f;
+                Time.timeScale = TimeScaleAnt;
                 StartCoroutine(QuintaPantalla());
             }
         }
@@ -82,7 +84,7 @@ public class TutorialController : MonoBehaviour
             if (estadoTutorial == 5)
             {
                 canvas5.SetActive(false);
-                Time.timeScale = 1f;
+                Time.timeScale = TimeScaleAnt;
                 StartCoroutine(SextaPantalla());
             }
         }
@@ -92,8 +94,11 @@ public class TutorialController : MonoBehaviour
             //Fin del tutorial
             if (estadoTutorial == 6)
             {
+                if(canvas6.activeSelf){
+                    Time.timeScale = TimeScaleAnt;
+                }
                 canvas6.SetActive(false);
-                Time.timeScale = 1f;
+                
 
                 MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
                 scriptMusica.InicioOleada();
@@ -107,6 +112,7 @@ public class TutorialController : MonoBehaviour
         controladorSFX.PlayTutorial();
         canvas.SetActive(true);
         estadoTutorial = 1;
+        TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
     }
 
@@ -118,6 +124,7 @@ public class TutorialController : MonoBehaviour
 
         canvas2.SetActive(true);
         estadoTutorial = 2;
+        TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
     }
 
@@ -130,6 +137,7 @@ public class TutorialController : MonoBehaviour
 
         canvas3.SetActive(true);
         estadoTutorial = 3;
+        TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
     }
 
@@ -142,6 +150,7 @@ public class TutorialController : MonoBehaviour
 
         canvas4.SetActive(true);
         estadoTutorial = 4;
+        TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
     }
 
@@ -154,6 +163,7 @@ public class TutorialController : MonoBehaviour
 
         canvas5.SetActive(true);
         estadoTutorial = 5;
+        TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
     }
 
@@ -165,6 +175,7 @@ public class TutorialController : MonoBehaviour
 
         canvas6.SetActive(true);
         estadoTutorial = 6;
+        TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
     }
 }

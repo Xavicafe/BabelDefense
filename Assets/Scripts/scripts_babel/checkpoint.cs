@@ -18,19 +18,28 @@ public class checkpoint : MonoBehaviour
     public GameObject canvas_game_over;
 
     public string texto;
+    public Image panel_detras_texto;
     public Text textElement;
     public Camera camara;
 
     SFXController controladorSFX;
     private PassaEscenas pas;
+    
+    public ParticleSystem humo;
     // Update is called once per frame
     void Update()
     {
         camara = Camera.main;
         texto = numero+" / "+ max;
         textElement.text=texto;
+        panel_detras_texto.transform.LookAt(camara.transform.position);
         textElement.transform.LookAt(camara.transform.position);
         textElement.transform.Rotate(0,180,0);
+        humo = GameObject.FindGameObjectWithTag("HUMO").GetComponent<ParticleSystem>();
+        if (humo == null)
+        {
+            Debug.LogError("El sistema de partículas no está asignado. Asigna el componente ParticleSystem en el inspector.");
+        }
     }
     private void Start()
     {
@@ -73,6 +82,8 @@ public class checkpoint : MonoBehaviour
                     controladorSFX = GameObject.FindGameObjectWithTag("audiosfx").GetComponent<SFXController>();
                     controladorSFX.PlayConstruirPiso();
 
+                    humo.transform.position = piso1.transform.position;
+                    humo.Play();
                     GameObject piso = (GameObject)Instantiate(piso1);
                     GameObject checkpoint = (GameObject)Instantiate(check1);
                     if(numeroPiso%2==1){
@@ -109,6 +120,8 @@ public class checkpoint : MonoBehaviour
                     controladorSFX = GameObject.FindGameObjectWithTag("audiosfx").GetComponent<SFXController>();
                     controladorSFX.PlayConstruirPiso();
 
+                    humo.transform.position = piso1.transform.position;
+                    humo.Play();
                     GameObject piso = (GameObject)Instantiate(piso1);
                     GameObject checkpoint = (GameObject)Instantiate(check1);
                     if(numeroPiso%2==1){
@@ -145,6 +158,8 @@ public class checkpoint : MonoBehaviour
                     controladorSFX = GameObject.FindGameObjectWithTag("audiosfx").GetComponent<SFXController>();
                     controladorSFX.PlayConstruirPiso();
 
+                    humo.transform.position = piso1.transform.position;
+                    humo.Play();                    
                     GameObject piso = (GameObject)Instantiate(piso1);
                     GameObject checkpoint = (GameObject)Instantiate(check1);
                     if(numeroPiso%2==1){

@@ -15,7 +15,9 @@ public class LevelManager : MonoBehaviour
 
     //C�DIGO PARA GENERAR LA ESCENA DEL JUEGO
 
-    
+    void Start(){
+        Time.timeScale = 1f;
+    }
 
     void Update()
     {
@@ -44,6 +46,8 @@ public class LevelManager : MonoBehaviour
         
 
     }
+
+    
 
     public GameObject game_over(){
         return Game_over;

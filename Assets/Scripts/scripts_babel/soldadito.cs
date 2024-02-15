@@ -99,7 +99,6 @@ public class soldadito : MonoBehaviour
             controladorSFX.PlayHumanoAtaque();
 
             Destroy (gameObject);
-            Debug.Log("He llegado");
         }
         if (other.CompareTag("final")){
             final=true;

@@ -33,7 +33,7 @@ public class angel : MonoBehaviour
     public Transform partToRotate;
     public float turnSpeed = 10f;
 
-    public Animation anim;
+    public Animator anim;
 
     [Header("Laser")]
     public bool useLaser = false;
@@ -113,7 +113,11 @@ public class angel : MonoBehaviour
 
     void Awake()
     {
-        anim = GetComponent<Animation>();
+        if(anim==null && (Name=="Arcángel" /*|| Name="Potestad"*/)){
+            Transform hijo = transform.GetChild(0);
+            GameObject hijoObject = hijo.gameObject;
+            anim = hijoObject.GetComponent<Animator>();
+        }
     }
 
     private void Update()
@@ -136,12 +140,19 @@ public class angel : MonoBehaviour
                     }
                 }
             }
+            if(Name=="Arcángel"){
+            anim.SetBool("EnemigoDetectado", false);
+        }
             return;
             
         }
 
         if(Name!="Virtud"){
             LockOnTarget();
+        }
+        
+        if(Name=="Arcángel" /*|| Name=="Potestad"*/){
+            anim.SetBool("EnemigoDetectado", true);
         }
 
         if (useLaser)
@@ -267,7 +278,7 @@ public class angel : MonoBehaviour
             rango=pas.rango_angelsimple;
             daño=pas.daño_angelsimple;
         }
-        if(Name=="Arcangel"){
+        if(Name=="Arcángel"){
             cadencia=pas.cadencia_arcangel;
             rango=pas.rango_arcangel;
             daño=pas.daño_arcangel;

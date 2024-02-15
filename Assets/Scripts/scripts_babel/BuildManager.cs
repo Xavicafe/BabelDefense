@@ -48,7 +48,6 @@ public class BuildManager : MonoBehaviour
 		rango.transform.position = selectedAltar.GetBuildPosition();
 		angel an = altar.angel.transform.GetComponent<angel>(); 
 		rango.transform.localScale = new Vector3(an.range*2,an.range/4,an.range*2);
-		Debug.Log("BUILDER:"+an.range);
 		nodeUI.SetTarget(altar);
 	}
 

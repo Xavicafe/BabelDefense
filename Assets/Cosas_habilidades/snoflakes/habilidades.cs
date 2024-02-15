@@ -17,6 +17,15 @@ public class habilidades : MonoBehaviour
     public AudioClip hielo;
     public AudioClip dinero;
     public AudioClip helldrums;
+
+    public Image Cooldown_Image_EH;
+    public Image Cooldown_Image_GF;
+    public Image Cooldown_Image_A;
+
+    public Slider Slider_Image_EH;
+    public Slider Slider_Image_GF;
+    public Slider Slider_Image_A;
+
     public bool IsGoldFury=false;
     public bool IsEraHielo=false;
     public bool IsApocalipsis=false;
@@ -25,6 +34,10 @@ public class habilidades : MonoBehaviour
     public int Duracion_GoldFury=30;
     public int Duracion_Apocalipsis=10;
     public int Duracion_EraHielo=20;
+
+    public int Precio_GoldFury=50;
+    public int Precio_Apocalipsis=50;
+    public int Precio_EraHielo=50;
 
     public int Daño_Base_A;
     public float Slow_Base_EH;
@@ -73,23 +86,36 @@ public class habilidades : MonoBehaviour
         daño_A = pas.damage_A;
         amount_GF = pas.amount_GF;
 
+        Cooldown_Image_EH.fillAmount = 0.0f;
+        Cooldown_Image_GF.fillAmount = 0.0f;
+        Cooldown_Image_A.fillAmount = 0.0f;
+
         audioSource = GetComponent<AudioSource>();
     }
 
     public void Activacion_EraHielo(Button but)
     {
         if(!IsApocalipsis && !IsEraHielo && !IsGoldFury){
-            IsEraHielo=true;
-            StartCoroutine(DelayEraHielo(but));
-            // Activa el objeto
-            EraHielo.SetActive(true);
-            particlesEH.SetActive(true);
+            if(PlayerStats.Money < Precio_EraHielo){
+                Debug.Log("No tienes suficiente dinero");
+            }
+            else{
+                Slider_Image_EH.gameObject.SetActive(true);
+                Slider_Image_EH.value=0.0f;
 
-            // Obtén el componente Animator del objeto
-            Animator animator = EraHielo.GetComponent<Animator>();
-            animator.SetBool("Activo", true);
-            audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(hielo);
+                PlayerStats.Money -= Precio_EraHielo;
+                IsEraHielo=true;
+                StartCoroutine(DelayEraHielo(but));
+                // Activa el objeto
+                EraHielo.SetActive(true);
+                particlesEH.SetActive(true);
+
+                // Obtén el componente Animator del objeto
+                Animator animator = EraHielo.GetComponent<Animator>();
+                animator.SetBool("Activo", true);
+                audioSource = GetComponent<AudioSource>();
+                audioSource.PlayOneShot(hielo);
+            }
             
         }
         else{
@@ -106,23 +132,30 @@ public class habilidades : MonoBehaviour
     public void Activacion_GoldFury(Button but)
     {
         if(!IsApocalipsis && !IsEraHielo && !IsGoldFury){
-            IsGoldFury=true;
-            StartCoroutine(DelayGoldFury(but));
-            // Activa el objeto
-            GoldFury.SetActive(true);
-            GameObject[] lista = GameObject.FindGameObjectsWithTag("coin");
-            List<GameObject> coins = new List<GameObject>();
-            coins.AddRange(lista);
-            for(int i=0; i<coins.Count;i++){
-                lista[i].GetComponent<coins>().marca=true;
+            if(PlayerStats.Money < Precio_GoldFury){
+                Debug.Log("No tienes suficiente dinero");
             }
-            // Obtén el componente Animator del objeto
-            Animator animator = GoldFury1.GetComponent<Animator>();
-            animator.SetBool("Activo", true);
-            Animator animator1 = GoldFury2.GetComponent<Animator>();
-            animator1.SetBool("Activo", true);
-            audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(dinero);
+            else{
+                Slider_Image_GF.gameObject.SetActive(true);
+                PlayerStats.Money -= Precio_GoldFury;
+                IsGoldFury=true;
+                StartCoroutine(DelayGoldFury(but));
+                // Activa el objeto
+                GoldFury.SetActive(true);
+                GameObject[] lista = GameObject.FindGameObjectsWithTag("coin");
+                List<GameObject> coins = new List<GameObject>();
+                coins.AddRange(lista);
+                for(int i=0; i<coins.Count;i++){
+                    lista[i].GetComponent<coins>().marca=true;
+                }
+                // Obtén el componente Animator del objeto
+                Animator animator = GoldFury1.GetComponent<Animator>();
+                animator.SetBool("Activo", true);
+                Animator animator1 = GoldFury2.GetComponent<Animator>();
+                animator1.SetBool("Activo", true);
+                audioSource = GetComponent<AudioSource>();
+                audioSource.PlayOneShot(dinero);
+            }
         }
         else{
             Debug.Log("Ya tienes una habilidad usandose");
@@ -139,17 +172,24 @@ public class habilidades : MonoBehaviour
     public void Activacion_Apocalipsis(Button but)
     {
         if(!IsApocalipsis && !IsEraHielo && !IsGoldFury){
-            IsApocalipsis=true;
-            StartCoroutine(DelayApocalipsis(but));
-            
-            // Activa el objeto
-            Apocalipsis_rojo.SetActive(true);
-            gene.Start_meteors();
-            Animator animator = Apocalipsis_rojo.GetComponent<Animator>();
-            animator.SetBool("Activo", true);
-            Apocalipsis.SetActive(true);
-            audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(helldrums);
+            if(PlayerStats.Money < Precio_Apocalipsis){
+                Debug.Log("No tienes suficiente dinero");
+            }
+            else{
+                Slider_Image_A.gameObject.SetActive(true);
+                PlayerStats.Money -= Precio_Apocalipsis;
+                IsApocalipsis=true;
+                StartCoroutine(DelayApocalipsis(but));
+                
+                // Activa el objeto
+                Apocalipsis_rojo.SetActive(true);
+                gene.Start_meteors();
+                Animator animator = Apocalipsis_rojo.GetComponent<Animator>();
+                animator.SetBool("Activo", true);
+                Apocalipsis.SetActive(true);
+                audioSource = GetComponent<AudioSource>();
+                audioSource.PlayOneShot(helldrums);
+            }
         }
         else{
             Debug.Log("Ya tienes una habilidad usandose");
@@ -164,21 +204,27 @@ public class habilidades : MonoBehaviour
 
     IEnumerator DelayApocalipsis(Button but)
     {
+        StartCoroutine(Actualizar_Slider(Slider_Image_A, Duracion_Apocalipsis * (1+((float)duracion_A+1)/10)));
         yield return new WaitForSeconds(Duracion_Apocalipsis * (1+((float)duracion_A+1)/10));
         Desactivacion_Apocalipsis(but);
+        Slider_Image_A.gameObject.SetActive(false);
         IsApocalipsis=false;
 
     }
     IEnumerator DelayGoldFury(Button but)
     {
+        StartCoroutine(Actualizar_Slider(Slider_Image_GF, Duracion_GoldFury * (1+((float)duracion_GF+1)/10)));
         yield return new WaitForSeconds(Duracion_GoldFury * (1+((float)duracion_GF+1)/10));
         Desactivacion_GoldFury(but);
+        Slider_Image_GF.gameObject.SetActive(false);
         IsGoldFury=false;
     }
     IEnumerator DelayEraHielo(Button but)
     {
+        StartCoroutine(Actualizar_Slider(Slider_Image_EH, Duracion_EraHielo * (1+((float)duracion_EH+1)/10)));
         yield return new WaitForSeconds(Duracion_EraHielo * (1+((float)duracion_EH+1)/10));
         Desactivacion_EraHielo(but);
+        Slider_Image_EH.gameObject.SetActive(false);
         IsEraHielo=false;
     }
 
@@ -186,37 +232,60 @@ public class habilidades : MonoBehaviour
     {
         if(hab=="GF"){
             but.interactable=false;
-            StartCoroutine(ActualizarTexto(but,cooldown_Todas_Hab / (1+((float)cooldown_GF+1)/10)));
+            StartCoroutine(ActualizarTexto(but,cooldown_Todas_Hab / (1+((float)cooldown_GF+1)/10),Cooldown_Image_GF));
             yield return new WaitForSeconds(cooldown_Todas_Hab / (1+((float)cooldown_GF+1)/10));
-            but.interactable=true;
+            
         }
         if(hab=="EH"){
             but.interactable=false;
-            StartCoroutine(ActualizarTexto(but,cooldown_Todas_Hab / (1+((float)cooldown_EH+1)/10)));
+            StartCoroutine(ActualizarTexto(but,cooldown_Todas_Hab / (1+((float)cooldown_EH+1)/10),Cooldown_Image_EH));
             yield return new WaitForSeconds(cooldown_Todas_Hab / (1+((float)cooldown_EH+1)/10));
-            but.interactable=true;
+            
         }
         if(hab=="A"){
             but.interactable=false;
-            StartCoroutine(ActualizarTexto(but,cooldown_Todas_Hab / (1+((float)cooldown_A+1)/10)));
+            StartCoroutine(ActualizarTexto(but,cooldown_Todas_Hab / (1+((float)cooldown_A+1)/10),Cooldown_Image_A));
             yield return new WaitForSeconds(cooldown_Todas_Hab / (1+((float)cooldown_A+1)/10));
-            but.interactable=true;
+            
         }
 
     }
 
-    private System.Collections.IEnumerator ActualizarTexto(Button but, float tiempo)
+    private System.Collections.IEnumerator ActualizarTexto(Button but, float tiempo, Image im)
     {
+        
+        im.fillAmount = 1.0f;
+        StartCoroutine(Actualizar_Imagen_Cooldown(but, im, tiempo));
         TMP_Text buttonText = but.GetComponentInChildren<TMP_Text>();
         string Ini = buttonText.text;
         float timeRemaining = tiempo;
-        while (timeRemaining > 0f)
+        while (timeRemaining >= 0f)
         {
-            buttonText.text=timeRemaining.ToString("0");
+            //buttonText.text=timeRemaining.ToString("0");
             yield return new WaitForSeconds(1f);
             timeRemaining--;
         }
         buttonText.text=Ini;
 
     }
+    private System.Collections.IEnumerator Actualizar_Imagen_Cooldown(Button but, Image im, float tiempo){
+        float tiempo_rest = tiempo;
+        while(tiempo_rest >= 0){
+            
+            tiempo_rest -= 0.25f;
+            im.fillAmount = tiempo_rest / tiempo;
+            yield return new WaitForSeconds(0.25f);
+        }
+        but.interactable=true;
+    }
+
+    private System.Collections.IEnumerator Actualizar_Slider(Slider slider, float tiempo){
+        float tiempo_rest = 0;
+        while(tiempo_rest <= tiempo){
+            tiempo_rest += 0.25f;
+            slider.value = tiempo_rest / tiempo;
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
 }

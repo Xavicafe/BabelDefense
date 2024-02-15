@@ -15,6 +15,6 @@ public class EXP : MonoBehaviour
     }
 
     void Update(){
-        exp_mejoras.text=pas.experiencia.ToString();
+        exp_mejoras.text="EXP: "+pas.experiencia.ToString();
     }
 }
