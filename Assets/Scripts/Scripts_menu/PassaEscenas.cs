@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PassaEscenas : Singleton<PassaEscenas>
 {
     public float experiencia=0; 
+    public float volume;
+    public float efects;
 
     //angel simple
     public bool block_angelsimple = false;
@@ -86,6 +88,8 @@ public class PassaEscenas : Singleton<PassaEscenas>
     // Start is called before the first frame update
     void Start()
     {
+        volume = 75;
+        efects = 75;
         angeles_bloqueados = new List<bool> { block_arcangel , block_principado , block_virtud , block_potestad , block_dominio , block_trono , block_querubin , block_serafin};
     }
 
