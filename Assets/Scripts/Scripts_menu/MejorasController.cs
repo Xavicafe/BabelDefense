@@ -44,6 +44,18 @@ public class MejorasController : MonoBehaviour
     public GameObject Name;
     public GameObject desbloquear;
 
+    public GameObject Icono_rango;
+    public GameObject Icono_duraci;
+
+    public GameObject Icono_daño;
+    public GameObject Icono_cooldown;
+
+    public GameObject Icono_cadencia;
+    public GameObject Icono_ganancia;
+    public GameObject Icono_ralenti;
+    public GameObject Icono_dañoo;
+
+
     public List<GameObject> candados;
 
    
@@ -121,6 +133,7 @@ public class MejorasController : MonoBehaviour
                 }
             }
             sel_an.OnMouseDown(indice);
+            //textos
             Mejora1.gameObject.SetActive(true);
             Mejora1_DUR.gameObject.SetActive(false);
             Mejora2.gameObject.SetActive(true);
@@ -129,6 +142,19 @@ public class MejorasController : MonoBehaviour
             Mejora3_Ganancia.gameObject.SetActive(false);
             Mejora3_Relen.gameObject.SetActive(false);
             Mejora3_Daño.gameObject.SetActive(false);
+
+            //Iconos
+
+            Icono_rango.gameObject.SetActive(true);
+            Icono_duraci.gameObject.SetActive(false);
+
+            Icono_daño.gameObject.SetActive(true);
+            Icono_cooldown.gameObject.SetActive(false);
+
+            Icono_cadencia.gameObject.SetActive(true);
+            Icono_ganancia.gameObject.SetActive(false);
+            Icono_ralenti.gameObject.SetActive(false);
+            Icono_dañoo.gameObject.SetActive(false);
         }
         if(index==2){
             int indice =-1;
@@ -142,26 +168,47 @@ public class MejorasController : MonoBehaviour
                     break;
                 }
             }
+
+            //cambiar textos por Ñ
             sel_hab.OnMouseDown(indice);
             Mejora1.gameObject.SetActive(false);
             Mejora1_DUR.gameObject.SetActive(true);
             Mejora2.gameObject.SetActive(false);
             Mejora2_COOL.gameObject.SetActive(true);
+
+            //Iconos
+
+            Icono_rango.gameObject.SetActive(false);
+            Icono_duraci.gameObject.SetActive(true);
+
+            Icono_daño.gameObject.SetActive(false);
+            Icono_cooldown.gameObject.SetActive(true);
+
+            Icono_cadencia.gameObject.SetActive(false);
+
+            //Según la habilidad seleccionada
+
             if(indice==0){
                 Mejora3.gameObject.SetActive(false);
                 Mejora3_Ganancia.gameObject.SetActive(true);
                 Mejora3_Relen.gameObject.SetActive(false);
                 Mejora3_Daño.gameObject.SetActive(false);
+
+                Icono_ganancia.gameObject.SetActive(true);
             }else if(indice==1){
                 Mejora3.gameObject.SetActive(false);
                 Mejora3_Ganancia.gameObject.SetActive(false);
                 Mejora3_Relen.gameObject.SetActive(true);
                 Mejora3_Daño.gameObject.SetActive(false);
+
+                Icono_ralenti.gameObject.SetActive(true);
             }else if(indice==2){
                 Mejora3.gameObject.SetActive(false);
                 Mejora3_Ganancia.gameObject.SetActive(false);
                 Mejora3_Relen.gameObject.SetActive(false);
                 Mejora3_Daño.gameObject.SetActive(true);
+
+                Icono_dañoo.gameObject.SetActive(true);
             }
             desbloquear.SetActive(false);
         }

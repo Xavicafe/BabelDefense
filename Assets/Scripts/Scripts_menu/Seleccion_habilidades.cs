@@ -53,6 +53,9 @@ public class Seleccion_habilidades : MonoBehaviour
             for(int i=0;i<=pas.slow_EH;i++){
                 mejcon.estrellas_cadencia[i].SetActive(true);
             }
+            mejcon.Icono_ganancia.gameObject.SetActive(false);
+            mejcon.Icono_ralenti.gameObject.SetActive(true);
+            mejcon.Icono_dañoo.gameObject.SetActive(false);
         }
         if(index==0){
             mejcon.Mejora3.gameObject.SetActive(false);
@@ -72,6 +75,10 @@ public class Seleccion_habilidades : MonoBehaviour
             for(int i=0;i<=pas.amount_GF;i++){
                 mejcon.estrellas_cadencia[i].SetActive(true);
             }
+
+            mejcon.Icono_ganancia.gameObject.SetActive(true);
+            mejcon.Icono_ralenti.gameObject.SetActive(false);
+            mejcon.Icono_dañoo.gameObject.SetActive(false);
         }
         if(index==2){
             mejcon.Mejora3.gameObject.SetActive(false);
@@ -91,6 +98,9 @@ public class Seleccion_habilidades : MonoBehaviour
             for(int i=0;i<=pas.damage_A;i++){
                 mejcon.estrellas_cadencia[i].SetActive(true);
             }
+            mejcon.Icono_ganancia.gameObject.SetActive(false);
+            mejcon.Icono_ralenti.gameObject.SetActive(false);
+            mejcon.Icono_dañoo.gameObject.SetActive(true);
         }
     }
 
