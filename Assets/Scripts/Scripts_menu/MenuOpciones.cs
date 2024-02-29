@@ -32,9 +32,4 @@ public class MenuOpciones : MonoBehaviour
         pas.efects = volumen;
         audioMixer.SetFloat("sfxVol", volumen);
     }
-
-    public void CambiarCalidad(int index)
-    {
-        QualitySettings.SetQualityLevel(index);
-    }
 }
