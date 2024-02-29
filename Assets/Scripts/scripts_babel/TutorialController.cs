@@ -44,7 +44,8 @@ public class TutorialController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || 
+        Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))&&estadoTutorial == 2)
         {
             //Pasar a la pantalla 3
             if (estadoTutorial == 2)
@@ -55,7 +56,7 @@ public class TutorialController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E) && estadoTutorial == 3)
+        if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E) || Input.GetAxis("Mouse ScrollWheel") != 0f) && estadoTutorial == 3)
         {
             //Pasar a la pantalla 4
             if (estadoTutorial == 3)
@@ -65,46 +66,38 @@ public class TutorialController : MonoBehaviour
                 StartCoroutine(CuartaPantalla());
             }
         }
-
-        if (Input.anyKeyDown && estadoTutorial == 4)
+        if (estadoTutorial == 4 && Input.GetKeyDown(KeyCode.Return))
         {
-            //Pasar a la pantalla 5
-            if (estadoTutorial == 4)
-            {
-                canvas4.SetActive(false);
-                Time.timeScale = TimeScaleAnt;
-                StartCoroutine(QuintaPantalla());
-            }
+            canvas4.SetActive(false);
+            Time.timeScale = TimeScaleAnt;
+            StartCoroutine(QuintaPantalla());
         }
+        
           
 
-        if (Input.anyKeyDown && estadoTutorial == 5)
+        if ( estadoTutorial == 5 && Input.GetKeyDown(KeyCode.Return))
         {
-            //Pasar a la pantalla 6
-            if (estadoTutorial == 5)
-            {
-                canvas5.SetActive(false);
-                Time.timeScale = TimeScaleAnt;
-                StartCoroutine(SextaPantalla());
-            }
+            canvas5.SetActive(false);
+            Time.timeScale = TimeScaleAnt;
+            StartCoroutine(SextaPantalla());
+        
         }
 
-        if (Input.anyKeyDown && estadoTutorial == 6)
+        if (estadoTutorial == 6 && Input.GetKeyDown(KeyCode.Return))
         {
-            //Fin del tutorial
-            if (estadoTutorial == 6)
-            {
-                if(canvas6.activeSelf){
-                    Time.timeScale = TimeScaleAnt;
-                }
-                canvas6.SetActive(false);
-                
-
-                MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
-                scriptMusica.InicioOleada();
+            if(canvas6.activeSelf){
+                Time.timeScale = TimeScaleAnt;
             }
-        }    
+            canvas6.SetActive(false);
+            
+
+            MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
+            scriptMusica.InicioOleada();
+        }
+          
     }
+
+
 
     void ComenzarTutorial()
     {
