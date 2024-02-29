@@ -9,6 +9,7 @@ public class checkpoint : MonoBehaviour
     public int numeroPiso = 0;
     public GameObject piso1;
     public GameObject check1;
+    public GameObject pisoinicial;
     
     public GameObject altares;
 
@@ -25,7 +26,8 @@ public class checkpoint : MonoBehaviour
     SFXController controladorSFX;
     private PassaEscenas pas;
     
-    public ParticleSystem humo;
+    private ParticleSystem humo;
+    private ParticleSystem humo_peque;
     // Update is called once per frame
     void Update()
     {
@@ -36,10 +38,12 @@ public class checkpoint : MonoBehaviour
         textElement.transform.LookAt(camara.transform.position);
         textElement.transform.Rotate(0,180,0);
         humo = GameObject.FindGameObjectWithTag("HUMO").GetComponent<ParticleSystem>();
+        humo_peque = GameObject.Find("humo_peque").GetComponent<ParticleSystem>();
         if (humo == null)
         {
             Debug.LogError("El sistema de partículas no está asignado. Asigna el componente ParticleSystem en el inspector.");
         }
+        
     }
     private void Start()
     {
@@ -54,12 +58,39 @@ public class checkpoint : MonoBehaviour
 
         
     }
+
+    void actualizarConstrucciones(){
+        GameObject pisooo = pisoinicial;
+        if(numeroPiso!=1){
+            pisooo = GameObject.Find("Spiral_piso"+numeroPiso+"(Clone)");
+        }
+        if(numero==0){
+        }else if(numero==1){
+            pisooo.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+        }else if(numero==2){
+            pisooo.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+            pisooo.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+        }else if(numero==3){
+            pisooo.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+            pisooo.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            pisooo.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+        }else {
+            pisooo.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+            pisooo.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            pisooo.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+            pisooo.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+        }
+        humo_peque.transform.position = pisooo.transform.GetChild(0).position;
+        humo_peque.Play();
+        
+    }
+
     void OnTriggerEnter (Collider other) {
+        
         if (other.CompareTag("esclavo")){
             numero++;
-            Debug.Log("Ha llegado un soldado");
             generador.TotalUnidades--;
-
+            
             if(numero>=max){
                 if (numeroPiso == game_over)
                 {
@@ -169,5 +200,6 @@ public class checkpoint : MonoBehaviour
                 }
             }
         }
+        actualizarConstrucciones();
     }
 }
