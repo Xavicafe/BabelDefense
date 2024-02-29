@@ -616,10 +616,11 @@ MonoBehaviour:
     CALATAYUD FERRE\n\nProgramaci\xF3n\nDesarrollo de Gameplay\nSistema de Oleadas\nProgramaci\xF3n
     IA\nManejo de Escenas\nFuncionalidad de la Interfaz\nAudio\n\n\n\nFRANCISCO DONGO\n\nPrototipo
     Inicial\n\n\n\nALBERTO L\xD3PEZ\n\nPrototipo Inicial\n\n\n\nADRI\xC1N ROCAFULL\n\nPrototipo
-    Inicial\n\n\n\n\n"
+    Inicial\n\n\n\nAGRADECIMIENTOS\n\n\n\nA nuestro profesor Ram\xF3n Moll\xE1 Vay\xE1\nA
+    Belkis por el apoyo durante el desarrollo\nA "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fc65ef5b67655f54c9a271df3735d8fb, type: 2}
-  m_sharedMaterial: {fileID: 3896514603077904543, guid: fc65ef5b67655f54c9a271df3735d8fb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ebe2739304376a44c82999e9a4a30c73, type: 2}
+  m_sharedMaterial: {fileID: -7742020686364025041, guid: ebe2739304376a44c82999e9a4a30c73, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -655,9 +656,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10.16
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 46.83
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -1867,7 +1868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.68750006, y: 0.031111114}
   m_AnchorMax: {x: 0.9825, y: 0.10444443}
-  m_AnchoredPosition: {x: -3.2149048, y: 1.6459961}
+  m_AnchoredPosition: {x: -3.2148438, y: 1.6459961}
   m_SizeDelta: {x: -140, y: -19}
   m_Pivot: {x: 0.5559957, y: 0.46527377}
 --- !u!114 &515184864
