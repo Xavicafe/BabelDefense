@@ -53,8 +53,6 @@ public class checkpoint : MonoBehaviour
         game_over=pas.n_pisos;
         canvas_game_over = lvlm.game_over();
         canvas_tienda = GameObject.FindGameObjectWithTag("CANVAS_TIENDA");
-        Debug.Log(canvas_game_over);
-        Debug.Log(canvas_tienda);
 
         
     }

@@ -231,8 +231,6 @@ public class angeles : MonoBehaviour
         }
     }
     public void desbloquearangel(){
-        Debug.Log(PrecioDesbloqueoAngeles.Count);
-        Debug.Log(ind);
         if(pas.experiencia>=PrecioDesbloqueoAngeles[ind]){
             pas.experiencia = pas.experiencia-PrecioDesbloqueoAngeles[ind];
             mejcon.comun.SetActive(true);

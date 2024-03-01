@@ -5388,7 +5388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5035f5f2de36aa04f8ba42a80e5166e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  experiencia: 100
+  experiencia: 1000
   volume: 0
   efects: 0
   block_angelsimple: 0
