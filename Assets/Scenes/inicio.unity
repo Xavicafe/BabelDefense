@@ -952,6 +952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_over: {fileID: 0}
+  pas: {fileID: 0}
 --- !u!1 &235838954
 GameObject:
   m_ObjectHideFlags: 0
@@ -6105,6 +6106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_over: {fileID: 0}
+  pas: {fileID: 0}
 --- !u!4 &2111255063
 Transform:
   m_ObjectHideFlags: 0
