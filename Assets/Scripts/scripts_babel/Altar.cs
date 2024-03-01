@@ -25,6 +25,7 @@ public class Altar : MonoBehaviour
 
     public Shop shop;
     bool puede = false;
+    TutorialController tutocon;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class Altar : MonoBehaviour
         rend = this.GetComponent<Renderer>();
         buildManager = BuildManager.instance;
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameController>();
+        tutocon = gm.GetComponent<TutorialController>();
     }
 
     private void OnMouseEnter()
@@ -47,6 +49,9 @@ public class Altar : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if(LevelManager.TutorialActivo && !tutocon.HaPulsado1){
+			tutocon.HaPulsado1=true;
+		}
         if(shop.traspasa){
             Debug.Log(shop.traspasa);
             return;

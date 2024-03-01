@@ -21146,7 +21146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &621111091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24800,8 +24800,10 @@ MonoBehaviour:
   canvas5: {fileID: 2146738152}
   canvas6: {fileID: 56123679}
   canvasflecha: {fileID: 1455728902}
-  FlechaCanva: {fileID: 0}
-  FlechaEspacial: {fileID: 621111090}
+  FlechaCanva: {fileID: 621111090}
+  FlechaEspacial: {fileID: 1729995337}
+  HaPulsado: 0
+  HaPulsado1: 0
 --- !u!114 &736150430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56788,7 +56790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1729995338
 Transform:
   m_ObjectHideFlags: 0
