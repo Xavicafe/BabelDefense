@@ -23,6 +23,11 @@ public class TutorialController : MonoBehaviour
     public GameObject FlechaCanva;
     public GameObject FlechaEspacial;
 
+    public bool HaPulsado=false;
+    public bool HaPulsado1=false;
+    bool Fase4=false;
+    bool Fase5=false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +81,27 @@ public class TutorialController : MonoBehaviour
         {
             canvas4.SetActive(false);
             Time.timeScale = TimeScaleAnt;
+            estadoTutorial = 0;
+            HaPulsado=false;
+            Fase4=true;
+            
+        }
+        if(HaPulsado && Fase4){
+            FlechaCanva.gameObject.SetActive(false);
+            HaPulsado=false;
+            Fase4=false;
+            
+            Fase5=true;
+            HaPulsado1=false;
+            FlechaEspacial.gameObject.SetActive(true);
+        }
+
+        if(HaPulsado1 && Fase5){
+            FlechaEspacial.gameObject.SetActive(false);
+            HaPulsado1=false;
+            Fase5=false;
             StartCoroutine(QuintaPantalla());
+            
         }
         
           
@@ -86,8 +111,12 @@ public class TutorialController : MonoBehaviour
             canvas5.SetActive(false);
             Time.timeScale = TimeScaleAnt;
             StartCoroutine(SextaPantalla());
+            
+            
         
         }
+
+        
 
         if (estadoTutorial == 6 && Input.GetKeyDown(KeyCode.Return))
         {
@@ -151,6 +180,7 @@ public class TutorialController : MonoBehaviour
         estadoTutorial = 4;
         TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
+        FlechaCanva.gameObject.SetActive(true);
     }
 
 
@@ -164,6 +194,7 @@ public class TutorialController : MonoBehaviour
         estadoTutorial = 5;
         TimeScaleAnt=Time.timeScale;
         Time.timeScale = 0f;
+        
     }
 
     IEnumerator SextaPantalla()

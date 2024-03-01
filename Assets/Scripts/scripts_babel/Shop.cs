@@ -16,10 +16,14 @@ public class Shop : MonoBehaviour
 
 	BuildManager buildManager;
 
+	TutorialController tutocon;
+
 	public bool traspasa = false;
 
 	void Start()
 	{
+		tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
+		Debug.Log(tutocon);
 		buildManager = BuildManager.instance;
 	}
 
@@ -33,6 +37,9 @@ public class Shop : MonoBehaviour
 
 	public void SelectAngel()
 	{
+		if(LevelManager.TutorialActivo && !tutocon.HaPulsado){
+			tutocon.HaPulsado=true;
+		}
 		Debug.Log("Angel seleccionado");
 		buildManager.SetAngelParaColocar(angel);
 	}
