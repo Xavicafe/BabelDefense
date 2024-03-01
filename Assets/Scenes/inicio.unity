@@ -3748,7 +3748,7 @@ GameObject:
   - component: {fileID: 1203483918}
   - component: {fileID: 1203483917}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: Musica_fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6852,9 +6852,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3397696279008351112}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 75
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

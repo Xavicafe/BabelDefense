@@ -23,13 +23,13 @@ public class MenuOpciones : MonoBehaviour
 
     public void CambiarVolumen(float volumen)
     {
-        pas.volume=volumen;
-        audioMixer.SetFloat("musicVol", volumen);
+        pas.volume = volumen;
+        GameObject.Find("Musica_fondo").GetComponent<AudioSource>().volume= volumen;
     }
 
     public void CambiarSFX(float volumen)
     {
         pas.efects = volumen;
-        audioMixer.SetFloat("sfxVol", volumen);
+        GameObject.Find("AudioSFX").GetComponent<AudioSource>().volume = volumen;
     }
 }

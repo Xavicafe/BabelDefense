@@ -89,8 +89,6 @@ public class PassaEscenas : Singleton<PassaEscenas>
     void Start()
     {
         Cargar_DATOS();
-        volume = 75;
-        efects = 75;
         angeles_bloqueados = new List<bool> { block_arcangel , block_principado , block_virtud , block_potestad , block_dominio , block_trono , block_querubin , block_serafin};
     }
 
