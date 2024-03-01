@@ -23,7 +23,6 @@ public class Shop : MonoBehaviour
 	void Start()
 	{
 		tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
-		Debug.Log(tutocon);
 		buildManager = BuildManager.instance;
 	}
 

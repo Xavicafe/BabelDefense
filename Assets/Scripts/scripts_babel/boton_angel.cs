@@ -10,16 +10,40 @@ public class boton_angel : MonoBehaviour
     public GameObject[] altares;
     private PassaEscenas pas;
     public List<GameObject> botones_angeles;
+    public GameObject Angelsimple;
+    public List<Vector2> posicion_botones;
     // Start is called before the first frame update
     void Start()
     {
         pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
-        for(int i=0;i<pas.angeles_bloqueados.Count;i++){
+
+        for(int i = 0; i<botones_angeles.Count;i++){
+            posicion_botones.Add( botones_angeles[7-i].GetComponent<RectTransform>().anchoredPosition);
+        }
+        posicion_botones.Add(Angelsimple.GetComponent<RectTransform>().anchoredPosition);
+
+        
+        int j=0;
+        for(int i=pas.angeles_bloqueados.Count-1;i>=0;i--){
             if(pas.angeles_bloqueados[i]){
                 botones_angeles[i].SetActive(false);
+                
+            }else{
+                botones_angeles[i].GetComponent<RectTransform>().anchoredPosition = posicion_botones[j];
+                Debug.Log(posicion_botones[j]);
+                j++;
+                
             }
 
         }
+        Angelsimple.GetComponent<RectTransform>().anchoredPosition = posicion_botones[j];
+        Debug.Log(posicion_botones[j]);
+
+        
+        
+        
+
+
         
     }
     public void Genera_angel(){

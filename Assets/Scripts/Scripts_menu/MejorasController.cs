@@ -228,6 +228,7 @@ public class MejorasController : MonoBehaviour
     }
 
     public void mejorar_Rango(){
+        Debug.Log("ENTRA");
         if(Setu_a.activeSelf){
             if (text.text=="ÁNGEL" && pas.experiencia>=coste[pas.rango_angelsimple]){
                 if (pas.rango_angelsimple<4){
@@ -286,20 +287,20 @@ public class MejorasController : MonoBehaviour
             }
         }
         else if(Setu_h.activeSelf){
-            if (text.text=="Furia del Oro" && pas.experiencia>=coste[pas.duracion_GF]){
+            if (text.text=="FURIA DEL ORO" && pas.experiencia>=coste[pas.duracion_GF]){
                 if (pas.duracion_GF<4){
                     pas.RemoveEXP(coste[pas.duracion_GF]);
                     pas.duracion_GF++;
                     estrellas_rango[pas.duracion_GF].SetActive(true);
                     
                 }
-            }else if(text.text=="Era de Hielo" && pas.experiencia>=coste[pas.duracion_EH]){
+            }else if(text.text=="ERA DE HIELO" && pas.experiencia>=coste[pas.duracion_EH]){
                 if (pas.duracion_EH<4){
                     pas.RemoveEXP(coste[pas.duracion_EH]);
                     pas.duracion_EH++;
                     estrellas_rango[pas.duracion_EH].SetActive(true);
                 }
-            }else if(text.text=="Apocalipsis" && pas.experiencia>=coste[pas.duracion_A]){
+            }else if(text.text=="APOCALIPSIS" && pas.experiencia>=coste[pas.duracion_A]){
                 if (pas.duracion_A<4){
                     pas.RemoveEXP(coste[pas.duracion_A]);
                     pas.duracion_A++;
@@ -367,19 +368,19 @@ public class MejorasController : MonoBehaviour
             }
         }
         else if(Setu_h.activeSelf){
-            if (text.text=="Furia del Oro" && pas.experiencia>=coste[pas.cooldown_GF]){
+            if (text.text=="FURIA DEL ORO" && pas.experiencia>=coste[pas.cooldown_GF]){
                 if (pas.cooldown_GF<4){
                     pas.RemoveEXP(coste[pas.cooldown_GF]);
                     pas.cooldown_GF++;
                     estrellas_daño[pas.cooldown_GF].SetActive(true);
             }
-            }else if(text.text=="Era de Hielo" && pas.experiencia>=coste[pas.cooldown_EH]){
+            }else if(text.text=="ERA DE HIELO" && pas.experiencia>=coste[pas.cooldown_EH]){
                 if (pas.cooldown_EH<4){
                     pas.RemoveEXP(coste[pas.cooldown_EH]);
                     pas.cooldown_EH++;
                     estrellas_daño[pas.cooldown_EH].SetActive(true);
                 }
-            }else if(text.text=="Apocalipsis" && pas.experiencia>=coste[pas.cooldown_A]){
+            }else if(text.text=="APOCALIPSIS" && pas.experiencia>=coste[pas.cooldown_A]){
                 if (pas.cooldown_A<4){
                     pas.RemoveEXP(coste[pas.cooldown_A]);
                     pas.cooldown_A++;
@@ -448,19 +449,19 @@ public class MejorasController : MonoBehaviour
             }
         }
         else if(Setu_h.activeSelf){
-            if (text.text=="Furia del Oro" && pas.experiencia>=coste[pas.amount_GF]){
+            if (text.text=="FURIA DEL ORO" && pas.experiencia>=coste[pas.amount_GF]){
                 if (pas.amount_GF<4){
                     pas.RemoveEXP(coste[pas.amount_GF]);
                     pas.amount_GF++;
                     estrellas_cadencia[pas.amount_GF].SetActive(true);
             }
-            }else if(text.text=="Era de Hielo" && pas.experiencia>=coste[pas.slow_EH]){
+            }else if(text.text=="ERA DE HIELO" && pas.experiencia>=coste[pas.slow_EH]){
                 if (pas.slow_EH<4){
                     pas.RemoveEXP(coste[pas.slow_EH]);
                     pas.slow_EH++;
                     estrellas_cadencia[pas.slow_EH].SetActive(true);
                 }
-            }else if(text.text=="Apocalipsis" && pas.experiencia>=coste[pas.damage_A]){
+            }else if(text.text=="APOCALIPSIS" && pas.experiencia>=coste[pas.damage_A]){
                 if (pas.damage_A<4){
                     pas.RemoveEXP(coste[pas.damage_A]);
                     pas.damage_A++;
@@ -629,7 +630,7 @@ public class MejorasController : MonoBehaviour
         }
         else if(Setu_h.activeSelf){
             Reset();
-            if (text.text=="Furia del Oro"){
+            if (text.text=="FURIA DEL ORO"){
                 int exp = 0;
                 for(int i=0;i<pas.duracion_GF;i++){
                 exp += coste[i];
@@ -645,7 +646,7 @@ public class MejorasController : MonoBehaviour
                 pas.duracion_GF=0;
                 pas.cooldown_GF=0;
                 pas.amount_GF=0;
-            }else if(text.text=="Era de Hielo"){
+            }else if(text.text=="ERA DE HIELO"){
                 int exp = 0;
                 for(int i=0;i<pas.duracion_EH;i++){
                 exp += coste[i];
@@ -662,7 +663,7 @@ public class MejorasController : MonoBehaviour
                 pas.cooldown_EH=0;
                 pas.slow_EH=0;
             }
-            else if(text.text=="Apocalipsis"){
+            else if(text.text=="APOCALIPSIS"){
                 int exp = 0;
                 for(int i=0;i<pas.duracion_A;i++){
                 exp += coste[i];
