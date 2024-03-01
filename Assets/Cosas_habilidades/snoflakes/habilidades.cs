@@ -9,7 +9,6 @@ public class habilidades : MonoBehaviour
     public GameObject EraHielo;
     public GameObject particlesEH;
     public GameObject GoldFury;
-    public GameObject GoldFury1;
     public GameObject GoldFury2;
     public GameObject Apocalipsis;
     public GameObject Apocalipsis_rojo;
@@ -68,9 +67,12 @@ public class habilidades : MonoBehaviour
 
     public PassaEscenas pas;
 
+    public GameObject monedas;
+
     // Start is called before the first frame update
     void Start()
     {
+        monedas.GetComponent<ParticleSystem>().Stop();
         pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
 
         
@@ -142,15 +144,8 @@ public class habilidades : MonoBehaviour
                 StartCoroutine(DelayGoldFury(but));
                 // Activa el objeto
                 GoldFury.SetActive(true);
-                GameObject[] lista = GameObject.FindGameObjectsWithTag("coin");
-                List<GameObject> coins = new List<GameObject>();
-                coins.AddRange(lista);
-                for(int i=0; i<coins.Count;i++){
-                    lista[i].GetComponent<coins>().marca=true;
-                }
+                monedas.GetComponent<ParticleSystem>().Play();
                 // Obtén el componente Animator del objeto
-                Animator animator = GoldFury1.GetComponent<Animator>();
-                animator.SetBool("Activo", true);
                 Animator animator1 = GoldFury2.GetComponent<Animator>();
                 animator1.SetBool("Activo", true);
                 audioSource = GetComponent<AudioSource>();
@@ -162,8 +157,7 @@ public class habilidades : MonoBehaviour
         }
     }
     public void Desactivacion_GoldFury(Button but){
-        Animator animator = GoldFury1.GetComponent<Animator>();
-        animator.SetBool("Activo", false);
+        monedas.GetComponent<ParticleSystem>().Stop();
         Animator animator1 = GoldFury2.GetComponent<Animator>();
         animator1.SetBool("Activo", false);
         StartCoroutine(CooldownHab("GF",but));
