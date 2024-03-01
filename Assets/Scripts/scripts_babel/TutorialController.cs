@@ -27,6 +27,7 @@ public class TutorialController : MonoBehaviour
     public bool HaPulsado1=false;
     bool Fase4=false;
     bool Fase5=false;
+    public bool TutoFinalizado = false;
 
     // Start is called before the first frame update
     void Start()
@@ -128,6 +129,7 @@ public class TutorialController : MonoBehaviour
 
             MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
             scriptMusica.InicioOleada();
+            TutoFinalizado=true;
         }
           
     }
