@@ -56,6 +56,10 @@ public class Seleccion_habilidades : MonoBehaviour
             mejcon.Icono_ganancia.gameObject.SetActive(false);
             mejcon.Icono_ralenti.gameObject.SetActive(true);
             mejcon.Icono_dañoo.gameObject.SetActive(false);
+
+            mejcon.Texto_costeMejora1.text = mejcon.coste[pas.duracion_EH]+" EXP";
+            mejcon.Texto_costeMejora2.text = mejcon.coste[pas.cooldown_EH]+" EXP";
+            mejcon.Texto_costeMejora3.text = mejcon.coste[pas.slow_EH]+" EXP";
         }
         if(index==0){
             mejcon.Mejora3.gameObject.SetActive(false);
@@ -79,6 +83,10 @@ public class Seleccion_habilidades : MonoBehaviour
             mejcon.Icono_ganancia.gameObject.SetActive(true);
             mejcon.Icono_ralenti.gameObject.SetActive(false);
             mejcon.Icono_dañoo.gameObject.SetActive(false);
+
+            mejcon.Texto_costeMejora1.text = mejcon.coste[pas.duracion_GF]+" EXP";
+            mejcon.Texto_costeMejora2.text = mejcon.coste[pas.cooldown_GF]+" EXP";
+            mejcon.Texto_costeMejora3.text = mejcon.coste[pas.amount_GF]+" EXP";
         }
         if(index==2){
             mejcon.Mejora3.gameObject.SetActive(false);
@@ -101,6 +109,10 @@ public class Seleccion_habilidades : MonoBehaviour
             mejcon.Icono_ganancia.gameObject.SetActive(false);
             mejcon.Icono_ralenti.gameObject.SetActive(false);
             mejcon.Icono_dañoo.gameObject.SetActive(true);
+
+            mejcon.Texto_costeMejora1.text = mejcon.coste[pas.duracion_A]+" EXP";
+            mejcon.Texto_costeMejora2.text = mejcon.coste[pas.cooldown_A]+" EXP";
+            mejcon.Texto_costeMejora3.text = mejcon.coste[pas.damage_A]+" EXP";
         }
     }
 
