@@ -244,63 +244,91 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.rango_angelsimple]);
                     pas.rango_angelsimple++;
                     estrellas_rango[pas.rango_angelsimple].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_angelsimple]+" EXP";
+                    if(pas.rango_angelsimple==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                        Texto_costeMejora1.text = coste[pas.rango_angelsimple]+" EXP";
+                    }
                 }
             }else if(text.text=="ARCÁNGEL" && pas.experiencia>=coste[pas.rango_arcangel]){
                 if (pas.rango_arcangel<4){
                     pas.RemoveEXP(coste[pas.rango_arcangel]);
                     pas.rango_arcangel++;
                     estrellas_rango[pas.rango_arcangel].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_arcangel]+" EXP";
+                    if(pas.rango_arcangel==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_arcangel]+" EXP";}
                 }
             }else if(text.text=="PRINCIPADO" && pas.experiencia>=coste[pas.rango_principado]){
                 if (pas.rango_principado<4){
                     pas.RemoveEXP(coste[pas.rango_principado]);
                     pas.rango_principado++;
                     estrellas_rango[pas.rango_principado].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_principado]+" EXP";
+                    if(pas.rango_principado==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_principado]+" EXP";}
                 }
             }else if(text.text=="VIRTUD" && pas.experiencia>=coste[pas.rango_virtud]){
                 if (pas.rango_virtud<4){
                     pas.RemoveEXP(coste[pas.rango_virtud]);
                     pas.rango_virtud++;
                     estrellas_rango[pas.rango_virtud].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_virtud]+" EXP";
+                    if(pas.rango_virtud==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_virtud]+" EXP";}
                 }
             }else if(text.text=="POTESTAD" && pas.experiencia>=coste[pas.rango_potestad]){
                 if (pas.rango_potestad<4){
                     pas.RemoveEXP(coste[pas.rango_potestad]);
                     pas.rango_potestad++;
                     estrellas_rango[pas.rango_potestad].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_potestad]+" EXP";
+                    if(pas.rango_potestad==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_potestad]+" EXP";}
                 }
             }else if(text.text=="DOMINIO" && pas.experiencia>=coste[pas.rango_dominio]){
                 if (pas.rango_dominio<4){
                     pas.RemoveEXP(coste[pas.rango_dominio]);
                     pas.rango_dominio++;
                     estrellas_rango[pas.rango_dominio].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_dominio]+" EXP";
+                    if(pas.rango_dominio==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_dominio]+" EXP";}
                 }
             }else if(text.text=="TRONO" && pas.experiencia>=coste[pas.rango_trono]){
                 if (pas.rango_trono<4){
                     pas.RemoveEXP(coste[pas.rango_trono]);
                     pas.rango_trono++;
                     estrellas_rango[pas.rango_trono].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_trono]+" EXP";
+                    if(pas.rango_trono==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_trono]+" EXP";}
                 }
             }else if(text.text=="QUERUBÍN" && pas.experiencia>=coste[pas.rango_querubin]){
                 if (pas.rango_querubin<4){
                     pas.RemoveEXP(coste[pas.rango_querubin]);
                     pas.rango_querubin++;
                     estrellas_rango[pas.rango_querubin].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_querubin]+" EXP";
+                    if(pas.rango_querubin==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_querubin]+" EXP";}
                 }
             }else if(text.text=="SERAFÍN" && pas.experiencia>=coste[pas.rango_serafin]){
                 if (pas.rango_serafin<4){
                     pas.RemoveEXP(coste[pas.rango_serafin]);
                     pas.rango_serafin++;
                     estrellas_rango[pas.rango_serafin].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.rango_serafin]+" EXP";
+                    if(pas.rango_serafin==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.rango_serafin]+" EXP";}
                 }
             }
         }
@@ -310,7 +338,10 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.duracion_GF]);
                     pas.duracion_GF++;
                     estrellas_rango[pas.duracion_GF].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.duracion_GF]+" EXP";
+                    if(pas.duracion_GF==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.duracion_GF]+" EXP";}
                     
                 }
             }else if(text.text=="ERA DE HIELO" && pas.experiencia>=coste[pas.duracion_EH]){
@@ -318,14 +349,20 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.duracion_EH]);
                     pas.duracion_EH++;
                     estrellas_rango[pas.duracion_EH].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.duracion_EH]+" EXP";
+                    if(pas.duracion_EH==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.duracion_EH]+" EXP";}
                 }
             }else if(text.text=="APOCALIPSIS" && pas.experiencia>=coste[pas.duracion_A]){
                 if (pas.duracion_A<4){
                     pas.RemoveEXP(coste[pas.duracion_A]);
                     pas.duracion_A++;
                     estrellas_rango[pas.duracion_A].SetActive(true);
-                    Texto_costeMejora1.text = coste[pas.duracion_A]+" EXP";
+                    if(pas.duracion_A==4){
+                        Texto_costeMejora1.text = "MAX";
+                    }else{
+                    Texto_costeMejora1.text = coste[pas.duracion_A]+" EXP";}
                 }
             }
         }
@@ -337,63 +374,90 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.daño_angelsimple]);
                     pas.daño_angelsimple++;
                     estrellas_daño[pas.daño_angelsimple].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_angelsimple]+" EXP";
+                    if(pas.daño_angelsimple==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_angelsimple]+" EXP";}
                 }
             }else if(text.text=="ARCÁNGEL" && pas.experiencia>=coste[pas.daño_arcangel]){
                 if (pas.daño_arcangel<4){
                     pas.RemoveEXP(coste[pas.daño_arcangel]);
                     pas.daño_arcangel++;
                     estrellas_daño[pas.daño_arcangel].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_arcangel]+" EXP";
+                    if(pas.daño_arcangel==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_arcangel]+" EXP";}
                 }
             }else if(text.text=="PRINCIPADO" && pas.experiencia>=coste[pas.daño_principado]){
                 if (pas.daño_principado<4){
                     pas.RemoveEXP(coste[pas.daño_principado]);
                     pas.daño_principado++;
                     estrellas_daño[pas.daño_principado].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_principado]+" EXP";
+                    if(pas.daño_principado==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_principado]+" EXP";}
                 }
             }else if(text.text=="VIRTUD" && pas.experiencia>=coste[pas.daño_virtud]){
                 if (pas.daño_virtud<4){
                     pas.RemoveEXP(coste[pas.daño_virtud]);
                     pas.daño_virtud++;
                     estrellas_daño[pas.daño_virtud].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_virtud]+" EXP";
+                    if(pas.daño_virtud==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_virtud]+" EXP";}
                 }
             }else if(text.text=="POTESTAD" && pas.experiencia>=coste[pas.daño_potestad]){
                 if (pas.daño_potestad<4){
                     pas.RemoveEXP(coste[pas.daño_potestad]);
                     pas.daño_potestad++;
                     estrellas_daño[pas.daño_potestad].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_potestad]+" EXP";
+                    if(pas.daño_potestad==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_potestad]+" EXP";}
                 }
             }else if(text.text=="DOMINIO" && pas.experiencia>=coste[pas.daño_dominio]){
                 if (pas.daño_dominio<4){
                     pas.RemoveEXP(coste[pas.daño_dominio]);
                     pas.daño_dominio++;
                     estrellas_daño[pas.daño_dominio].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_dominio]+" EXP";
+                    if(pas.daño_dominio==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_dominio]+" EXP";}
                 }
             }else if(text.text=="TRONO" && pas.experiencia>=coste[pas.daño_trono]){
                 if (pas.daño_trono<4){
                     pas.RemoveEXP(coste[pas.daño_trono]);
                     pas.daño_trono++;
                     estrellas_daño[pas.daño_trono].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_trono]+" EXP";
+                    if(pas.daño_trono==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_trono]+" EXP";}
                 }
             }else if(text.text=="QUERUBÍN" && pas.experiencia>=coste[pas.daño_querubin]){
                 if (pas.daño_querubin<4){
                     pas.RemoveEXP(coste[pas.daño_querubin]);
                     pas.daño_querubin++;
                     estrellas_daño[pas.daño_querubin].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_querubin]+" EXP";
+                    if(pas.daño_querubin==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_querubin]+" EXP";}
                 }
             }else if(text.text=="SERAFÍN" && pas.experiencia>=coste[pas.daño_serafin]){
                 if (pas.daño_serafin<4){
                     pas.RemoveEXP(coste[pas.daño_serafin]);
                     pas.daño_serafin++;
                     estrellas_daño[pas.daño_serafin].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.daño_serafin]+" EXP";
+                    if(pas.daño_serafin==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.daño_serafin]+" EXP";}
                 }
             }
         }
@@ -403,14 +467,20 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.cooldown_GF]);
                     pas.cooldown_GF++;
                     estrellas_daño[pas.cooldown_GF].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.cooldown_GF]+" EXP";
+                    if(pas.cooldown_GF==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.cooldown_GF]+" EXP";}
             }
             }else if(text.text=="ERA DE HIELO" && pas.experiencia>=coste[pas.cooldown_EH]){
                 if (pas.cooldown_EH<4){
                     pas.RemoveEXP(coste[pas.cooldown_EH]);
                     pas.cooldown_EH++;
                     estrellas_daño[pas.cooldown_EH].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.cooldown_EH]+" EXP";
+                    if(pas.cooldown_EH==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.cooldown_EH]+" EXP";}
                     
                 }
             }else if(text.text=="APOCALIPSIS" && pas.experiencia>=coste[pas.cooldown_A]){
@@ -418,7 +488,10 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.cooldown_A]);
                     pas.cooldown_A++;
                     estrellas_daño[pas.cooldown_A].SetActive(true);
-                    Texto_costeMejora2.text = coste[pas.cooldown_A]+" EXP";
+                    if(pas.cooldown_A==4){
+                        Texto_costeMejora2.text = "MAX";
+                    }else{
+                    Texto_costeMejora2.text = coste[pas.cooldown_A]+" EXP";}
                 }
             }
         }
@@ -431,63 +504,90 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.cadencia_angelsimple]);
                     pas.cadencia_angelsimple++;
                     estrellas_cadencia[pas.cadencia_angelsimple].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_angelsimple]+" EXP";
+                    if(pas.cadencia_angelsimple==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_angelsimple]+" EXP";}
                 }
             }else if(text.text=="ARCÁNGEL" && pas.experiencia>=coste[pas.cadencia_arcangel]){
                 if (pas.cadencia_arcangel<4){
                     pas.RemoveEXP(coste[pas.cadencia_arcangel]);
                     pas.cadencia_arcangel++;
                     estrellas_cadencia[pas.cadencia_arcangel].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_arcangel]+" EXP";
+                    if(pas.cadencia_arcangel==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_arcangel]+" EXP";}
                 }
             }else if(text.text=="PRINCIPADO" && pas.experiencia>=coste[pas.cadencia_principado]){
                 if (pas.cadencia_principado<4){
                     pas.RemoveEXP(coste[pas.cadencia_principado]);
                     pas.cadencia_principado++;
                     estrellas_cadencia[pas.cadencia_principado].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_principado]+" EXP";
+                    if(pas.cadencia_principado==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_principado]+" EXP";}
                 }
             }else if(text.text=="VIRTUD" && pas.experiencia>=coste[pas.cadencia_virtud]){
                 if (pas.cadencia_virtud<4){
                     pas.RemoveEXP(coste[pas.cadencia_virtud]);
                     pas.cadencia_virtud++;
                     estrellas_cadencia[pas.cadencia_virtud].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_virtud]+" EXP";
+                    if(pas.cadencia_virtud==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_virtud]+" EXP";}
                 }
             }else if(text.text=="POTESTAD" && pas.experiencia>=coste[pas.cadencia_potestad]){
                 if (pas.cadencia_potestad<4){
                     pas.RemoveEXP(coste[pas.cadencia_potestad]);
                     pas.cadencia_potestad++;
                     estrellas_cadencia[pas.cadencia_potestad].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_potestad]+" EXP";
+                    if(pas.cadencia_potestad==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_potestad]+" EXP";}
                 }
             }else if(text.text=="DOMINIO" && pas.experiencia>=coste[pas.cadencia_dominio]){
                 if (pas.cadencia_dominio<4){
                     pas.RemoveEXP(coste[pas.cadencia_dominio]);
                     pas.cadencia_dominio++;
                     estrellas_cadencia[pas.cadencia_dominio].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_dominio]+" EXP";
+                    if(pas.cadencia_dominio==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_dominio]+" EXP";}
                 }
             }else if(text.text=="TRONO" && pas.experiencia>=coste[pas.cadencia_trono]){
                 if (pas.cadencia_trono<4){
                     pas.RemoveEXP(coste[pas.cadencia_trono]);
                     pas.cadencia_trono++;
                     estrellas_cadencia[pas.cadencia_trono].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_trono]+" EXP";
+                    if(pas.cadencia_trono==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_trono]+" EXP";}
                 }
             }else if(text.text=="QUERUBÍN" && pas.experiencia>=coste[pas.cadencia_querubin]){
                 if (pas.cadencia_querubin<4){
                     pas.RemoveEXP(coste[pas.cadencia_querubin]);
                     pas.cadencia_querubin++;
                     estrellas_cadencia[pas.cadencia_querubin].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_querubin]+" EXP";
+                    if(pas.cadencia_querubin==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_querubin]+" EXP";}
                 }
             }else if(text.text=="SERAFÍN" && pas.experiencia>=coste[pas.cadencia_serafin]){
                 if (pas.cadencia_serafin<4){
                     pas.RemoveEXP(coste[pas.cadencia_serafin]);
                     pas.cadencia_serafin++;
                     estrellas_cadencia[pas.cadencia_serafin].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.cadencia_serafin]+" EXP";
+                    if(pas.cadencia_serafin==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.cadencia_serafin]+" EXP";}
                 }
             }
         }
@@ -497,21 +597,30 @@ public class MejorasController : MonoBehaviour
                     pas.RemoveEXP(coste[pas.amount_GF]);
                     pas.amount_GF++;
                     estrellas_cadencia[pas.amount_GF].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.amount_GF]+" EXP";
+                    if(pas.amount_GF==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.amount_GF]+" EXP";}
             }
             }else if(text.text=="ERA DE HIELO" && pas.experiencia>=coste[pas.slow_EH]){
                 if (pas.slow_EH<4){
                     pas.RemoveEXP(coste[pas.slow_EH]);
                     pas.slow_EH++;
                     estrellas_cadencia[pas.slow_EH].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.slow_EH]+" EXP";
+                    if(pas.slow_EH==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.slow_EH]+" EXP";}
                 }
             }else if(text.text=="APOCALIPSIS" && pas.experiencia>=coste[pas.damage_A]){
                 if (pas.damage_A<4){
                     pas.RemoveEXP(coste[pas.damage_A]);
                     pas.damage_A++;
                     estrellas_cadencia[pas.damage_A].SetActive(true);
-                    Texto_costeMejora3.text = coste[pas.damage_A]+" EXP";
+                    if(pas.damage_A==4){
+                        Texto_costeMejora3.text = "MAX";
+                    }else{
+                    Texto_costeMejora3.text = coste[pas.damage_A]+" EXP";}
                 }
             }
         }
