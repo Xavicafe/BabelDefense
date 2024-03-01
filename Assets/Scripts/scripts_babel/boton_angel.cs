@@ -37,7 +37,6 @@ public class boton_angel : MonoBehaviour
 
         }
         Angelsimple.GetComponent<RectTransform>().anchoredPosition = posicion_botones[j];
-        Debug.Log(posicion_botones[j]);
 
         
         

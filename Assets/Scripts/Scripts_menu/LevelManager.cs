@@ -10,12 +10,14 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public static bool TutorialActivo;
     public GameObject Game_over;
+    public PassaEscenas pas;
     
 
 
     //C�DIGO PARA GENERAR LA ESCENA DEL JUEGO
 
     void Start(){
+        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
         Time.timeScale = 1f;
     }
 
@@ -133,11 +135,20 @@ public class LevelManager : MonoBehaviour
     }
 
 
+    
+
     public void cerrar_juego()
     {
+        pas.Guardar_datos();
+
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
         Application.Quit();
     }
+
+    
+
+    
 }
