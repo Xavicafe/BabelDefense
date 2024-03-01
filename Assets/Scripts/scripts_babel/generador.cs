@@ -21,11 +21,18 @@ public class generador : MonoBehaviour
     SFXController controladorSFX;
 
     private PassaEscenas pas;
+    TutorialController tutocon;
 
     void Start()
     {
         pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
-        StartCoroutine(GenerarOleada());
+        tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
+        if(!LevelManager.TutorialActivo){
+            StartCoroutine(GenerarOleada());
+            
+        }else{
+            indiceOleada--;
+        }
         countdown = TiempoEntreOleadas;
         indiceOleada++;
     }
@@ -47,7 +54,7 @@ public class generador : MonoBehaviour
             Console.WriteLine("Has ganado la partida");
             this.enabled = false; 
             return; }
-        if (countdown <= 0f && TotalUnidades == 0)
+        if (countdown <= 0f && TotalUnidades == 0 && tutocon.TutoFinalizado)
         {
             MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
             scriptMusica.FinOleada();
