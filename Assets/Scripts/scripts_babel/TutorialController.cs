@@ -18,6 +18,11 @@ public class TutorialController : MonoBehaviour
 
     private float TimeScaleAnt;
 
+    public GameObject canvasflecha;
+
+    public GameObject FlechaCanva;
+    public GameObject FlechaEspacial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,7 @@ public class TutorialController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        canvas.transform.LookAt(Camera.main.transform.position);
         //COMPROBACIONES PARA IR PASANDO TUTORIAL
 
         if (Input.anyKeyDown && estadoTutorial == 1)
