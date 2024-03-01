@@ -60,6 +60,16 @@ public class Seleccion_habilidades : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.duracion_EH]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.cooldown_EH]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.slow_EH]+" EXP";
+
+            if(pas.duracion_EH==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.cooldown_EH==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.slow_EH==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
         }
         if(index==0){
             mejcon.Mejora3.gameObject.SetActive(false);
@@ -87,6 +97,15 @@ public class Seleccion_habilidades : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.duracion_GF]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.cooldown_GF]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.amount_GF]+" EXP";
+            if(pas.duracion_GF==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.cooldown_GF==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.amount_GF==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
         }
         if(index==2){
             mejcon.Mejora3.gameObject.SetActive(false);
@@ -113,6 +132,16 @@ public class Seleccion_habilidades : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.duracion_A]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.cooldown_A]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.damage_A]+" EXP";
+
+            if(pas.duracion_A==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.cooldown_A==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.damage_A==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
         }
     }
 

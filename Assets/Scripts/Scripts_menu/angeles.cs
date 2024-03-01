@@ -50,6 +50,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_angelsimple]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_angelsimple]+" EXP";
 
+            if(pas.rango_angelsimple==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_angelsimple==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_angelsimple==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
+
             for(int i=0;i<=pas.rango_angelsimple;i++){
                 mejcon.estrellas_rango[i].SetActive(true);
             }
@@ -64,6 +74,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.rango_arcangel]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_arcangel]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_arcangel]+" EXP";
+
+            if(pas.rango_arcangel==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_arcangel==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_arcangel==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
 
             for(int i=0;i<=pas.rango_arcangel;i++){
                 mejcon.estrellas_rango[i].SetActive(true);
@@ -81,6 +101,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_principado]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_principado]+" EXP";
 
+            if(pas.rango_principado==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_principado==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_principado==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
+
             
             for(int i=0;i<=pas.rango_principado;i++){
                 mejcon.estrellas_rango[i].SetActive(true);
@@ -97,6 +127,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_virtud]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_virtud]+" EXP";
 
+            if(pas.rango_virtud==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_virtud==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_virtud==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
+
             
             for(int i=0;i<=pas.rango_virtud;i++){
                 mejcon.estrellas_rango[i].SetActive(true);
@@ -112,6 +152,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.rango_potestad]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_potestad]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_potestad]+" EXP";
+
+            if(pas.rango_potestad==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_potestad==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_potestad==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
 
 
             for(int i=0;i<=pas.rango_potestad;i++){
@@ -130,6 +180,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_dominio]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_dominio]+" EXP";
 
+            if(pas.rango_dominio==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_dominio==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_dominio==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
+
             for(int i=0;i<=pas.rango_dominio;i++){
                 mejcon.estrellas_rango[i].SetActive(true);
             }
@@ -147,6 +207,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_trono]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_trono]+" EXP";
 
+            if(pas.rango_trono==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_trono==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_trono==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
+
             for(int i=0;i<=pas.rango_trono;i++){
                 mejcon.estrellas_rango[i].SetActive(true);
             }
@@ -161,6 +231,16 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.rango_querubin]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_querubin]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_querubin]+" EXP";
+
+            if(pas.rango_querubin==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_querubin==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_querubin==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
 
 
             for(int i=0;i<=pas.rango_querubin;i++){
@@ -177,6 +257,15 @@ public class angeles : MonoBehaviour
             mejcon.Texto_costeMejora1.text = mejcon.coste[pas.rango_serafin]+" EXP";
             mejcon.Texto_costeMejora2.text = mejcon.coste[pas.daño_serafin]+" EXP";
             mejcon.Texto_costeMejora3.text = mejcon.coste[pas.cadencia_serafin]+" EXP";
+            if(pas.rango_serafin==4){
+                mejcon.Texto_costeMejora1.text = "MAX";
+            }
+            if(pas.daño_serafin==4){
+                mejcon.Texto_costeMejora2.text = "MAX";
+            }
+            if(pas.cadencia_serafin==4){
+                mejcon.Texto_costeMejora3.text = "MAX";
+            }
         
 
             for(int i=0;i<=pas.rango_serafin;i++){
