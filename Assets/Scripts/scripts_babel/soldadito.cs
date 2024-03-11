@@ -136,7 +136,6 @@ public class soldadito : MonoBehaviour
         controladorSFX.PlayHumanoMurte();
         PlayerStats.Money += dinero;
         generador.TotalUnidades--;
-        Debug.Log(generador.TotalUnidades);
         Destroy(gameObject);
         
     }

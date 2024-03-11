@@ -4953,7 +4953,7 @@ MonoBehaviour:
   targeto: {fileID: 0}
   speed: 30
   damage: 20
-  damageIni: 0
+  damageIni: 20
   explosionRadius: 0
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1

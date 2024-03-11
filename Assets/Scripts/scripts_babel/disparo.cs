@@ -10,7 +10,7 @@ public class disparo : MonoBehaviour
     public float speed = 70f;
 
     public float damage = 50;
-    [HideInInspector]
+    
     public float damageIni;
 
     public float explosionRadius = 0f;
@@ -26,7 +26,7 @@ public class disparo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damageIni=damage;
+        //damageIni=damage;
         PosIni=transform.position;
         
     }

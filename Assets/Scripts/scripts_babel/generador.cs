@@ -9,6 +9,7 @@ public class generador : MonoBehaviour
     public float TiempoEntreOleadas = 15f;
     public float countdown = 2f;
 
+    
     public static int TotalUnidades = 0;
     public Oleada[] oleadas;
     public int indiceOleada = 0;
@@ -29,6 +30,7 @@ public class generador : MonoBehaviour
         tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
         if(!LevelManager.TutorialActivo){
             StartCoroutine(GenerarOleada());
+            tutocon.TutoFinalizado=true;
             
         }else{
             indiceOleada--;

@@ -59,6 +59,8 @@ public class angel : MonoBehaviour
     public bool[] mejora_daño={false,false,false,false,false};
     public bool[] mejora_rango={false,false,false,false,false};
 
+    private float dolor;
+
     public void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, range);
@@ -197,6 +199,10 @@ public class angel : MonoBehaviour
         else{
             GameObject bulletGO = (GameObject)Instantiate(bala, firePoint.position, firePoint.rotation);
             disparo disparo = bulletGO.GetComponent<disparo>();
+            if(dolor!=0){
+                disparo.damage = dolor;
+            }
+            
         
 
         if (disparo != null) {
@@ -206,6 +212,7 @@ public class angel : MonoBehaviour
     }
     void Laser()
     {
+        Debug.Log(damageOverTime);
         enemigo.Impacto(damageOverTime * Time.deltaTime);
         enemigo.Slow(slowAmount);
 
@@ -341,7 +348,7 @@ public class angel : MonoBehaviour
             mejora_daño[i]=true;
         }
         else{
-            bala.GetComponent<disparo>().damage = bala.GetComponent<disparo>().damageIni * (1+((float)i+1)/10);
+            dolor = bala.GetComponent<disparo>().damageIni * (1+(((float)i+1)/10));
             mejora_daño[i]=true;
         }
     }
