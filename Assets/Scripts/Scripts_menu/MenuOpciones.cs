@@ -13,12 +13,16 @@ public class MenuOpciones : MonoBehaviour
         pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
         GameObject.Find("SliderVolumen").GetComponent<Slider>().value = pas.volume;
         GameObject.Find("SliderSFX").GetComponent<Slider>().value = pas.efects;
+        Toggle checkbox = GameObject.Find("ToggleFullScreen").GetComponent<Toggle>();
+        checkbox.isOn=pas.fullscreen;
+        Debug.Log(checkbox);
     }
 
 
     public void PantallaCompleta(bool pantallaCompleta)
     {
         Screen.fullScreen = pantallaCompleta;
+        pas.fullscreen=pantallaCompleta;
     }
 
     public void CambiarVolumen(float volumen)

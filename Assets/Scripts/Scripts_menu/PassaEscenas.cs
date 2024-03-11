@@ -9,6 +9,7 @@ public class PassaEscenas : Singleton<PassaEscenas>
     public float experiencia=0; 
     public float volume;
     public float efects;
+    public bool fullscreen;
 
     //angel simple
     public bool block_angelsimple = false;

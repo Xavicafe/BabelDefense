@@ -5392,6 +5392,7 @@ MonoBehaviour:
   experiencia: 1000
   volume: 0
   efects: 0
+  fullscreen: 1
   block_angelsimple: 0
   rango_angelsimple: 0
   "da\xF1o_angelsimple": 0
