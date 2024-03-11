@@ -361,6 +361,7 @@ public class angeles : MonoBehaviour
             pas.angeles_bloqueados[ind-1]=false;
             ponerAngel(ind);
             mejcon.ActualizarCandados();
+            pas.Pasar_a_variables();
         }
         else{Debug.Log("No hay suficiente experiencia");}
     }

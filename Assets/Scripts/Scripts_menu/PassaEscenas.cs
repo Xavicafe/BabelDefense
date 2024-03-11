@@ -188,7 +188,7 @@ public class PassaEscenas : Singleton<PassaEscenas>
 
     public void Guardar_datos(){
 
-        Pasar_a_variables();
+        //Pasar_a_variables();
 
         PlayerPrefs.SetFloat("experiencia",experiencia);
         PlayerPrefs.SetFloat("volumen",volume);
