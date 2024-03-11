@@ -69691,11 +69691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3266684564585701842, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
       propertyPath: m_Value
-      value: 75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3266684564585701842, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
       propertyPath: m_MaxValue
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3266684564585701842, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
       propertyPath: m_MinValue
@@ -69719,7 +69719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3909524965043745266, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
       propertyPath: m_MaxValue
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3909524965043745266, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
       propertyPath: m_MinValue
@@ -71783,6 +71783,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 410437441}
     m_Modifications:
+    - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
+      propertyPath: tambores
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fbbaabeea2537e43b6566cef77f12e6, type: 3}
     - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
       propertyPath: disparoAngel
       value: 

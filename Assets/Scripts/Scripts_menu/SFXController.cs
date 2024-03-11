@@ -20,6 +20,7 @@ public class SFXController : MonoBehaviour
     public AudioClip gameWin;
 
     public AudioClip ventanaTutorial;
+    public AudioClip tambores;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,11 @@ public class SFXController : MonoBehaviour
     public void PlayConstruirPiso()
     {
         FuenteAudio.PlayOneShot(ConstruirPiso);
-        Debug.Log("Metodo PlayConstruirPiso() llamado");
+    }
+
+    public void PlayTambores()
+    {
+        FuenteAudio.PlayOneShot(tambores);
     }
 
 

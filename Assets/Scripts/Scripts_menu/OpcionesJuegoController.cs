@@ -6,11 +6,19 @@ public class OpcionesJuegoController : MonoBehaviour
 {
     private bool opciones_activas;
     public GameObject canvas_opciones;
+    private PassaEscenas pas;
     
     // Start is called before the first frame update
     void Start()
     {
-        opciones_activas = false;        
+        opciones_activas = false;      
+        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();  
+        GameObject.Find("Musica_fondo").GetComponent<AudioSource>().volume = pas.volume;
+        GameObject.Find("AudioSFX").GetComponent<AudioSource>().volume = pas.efects;
+        GameObject audiotambores = GameObject.Find("AudioTambores");
+        if(audiotambores!=null){
+            audiotambores.GetComponent<AudioSource>().volume = pas.volume;
+        }  
     }
 
     // Update is called once per frame

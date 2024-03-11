@@ -10,12 +10,15 @@ public class MenuOpciones : MonoBehaviour
     private PassaEscenas pas;
 
     public void Start(){
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
+        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();  
         GameObject.Find("SliderVolumen").GetComponent<Slider>().value = pas.volume;
         GameObject.Find("SliderSFX").GetComponent<Slider>().value = pas.efects;
+        
+
         Toggle checkbox = GameObject.Find("ToggleFullScreen").GetComponent<Toggle>();
         checkbox.isOn=pas.fullscreen;
         Debug.Log(checkbox);
+        
     }
 
 
@@ -28,7 +31,11 @@ public class MenuOpciones : MonoBehaviour
     public void CambiarVolumen(float volumen)
     {
         pas.volume = volumen;
-        GameObject.Find("Musica_fondo").GetComponent<AudioSource>().volume= volumen;
+        GameObject.Find("Musica_fondo").GetComponent<AudioSource>().volume = volumen;
+        GameObject audiotambores = GameObject.Find("AudioTambores");
+        if(audiotambores!=null){
+            audiotambores.GetComponent<AudioSource>().volume = volumen;
+        }
     }
 
     public void CambiarSFX(float volumen)
