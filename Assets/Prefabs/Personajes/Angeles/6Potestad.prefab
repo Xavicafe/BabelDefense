@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2594095479440717756}
   - component: {fileID: 2141424793714383878}
   m_Layer: 0
-  m_Name: Potestad
+  m_Name: 6Potestad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

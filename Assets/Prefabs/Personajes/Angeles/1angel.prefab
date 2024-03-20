@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 8884641486770991942}
   - component: {fileID: 2384184356848636120}
   m_Layer: 0
-  m_Name: angel
+  m_Name: 1angel
   m_TagString: angel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
