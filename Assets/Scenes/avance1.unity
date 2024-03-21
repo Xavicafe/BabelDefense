@@ -25053,7 +25053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603182cf2bee0c34fbb4a3eaf39f4072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 2000
+  startMoney: 200
   VidasIniciales: 20
 --- !u!114 &736150426
 MonoBehaviour:
@@ -25086,7 +25086,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 0
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25104,7 +25104,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25122,7 +25122,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25140,7 +25140,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25158,7 +25158,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25176,7 +25176,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25194,7 +25194,7 @@ MonoBehaviour:
     n_gigante: 1
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25212,7 +25212,7 @@ MonoBehaviour:
     n_gigante: 3
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25230,7 +25230,7 @@ MonoBehaviour:
     n_gigante: 5
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 10
     rate: 1
   - esclavo1: {fileID: 0}
     esclavo2: {fileID: 0}
@@ -25248,7 +25248,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 5
+    exp_round: 50
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25266,7 +25266,7 @@ MonoBehaviour:
     n_gigante: 3
     n_arquero: 0
     n_mago: 0
-    exp_round: 100
+    exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25284,7 +25284,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 20
     n_mago: 0
-    exp_round: 5
+    exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25302,7 +25302,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 50
     n_mago: 0
-    exp_round: 5
+    exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25320,7 +25320,7 @@ MonoBehaviour:
     n_gigante: 15
     n_arquero: 40
     n_mago: 0
-    exp_round: 5
+    exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25338,7 +25338,7 @@ MonoBehaviour:
     n_gigante: 15
     n_arquero: 30
     n_mago: 10
-    exp_round: 5
+    exp_round: 30
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25356,7 +25356,7 @@ MonoBehaviour:
     n_gigante: 25
     n_arquero: 50
     n_mago: 20
-    exp_round: 5
+    exp_round: 30
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25374,7 +25374,7 @@ MonoBehaviour:
     n_gigante: 30
     n_arquero: 60
     n_mago: 30
-    exp_round: 5
+    exp_round: 30
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25392,7 +25392,7 @@ MonoBehaviour:
     n_gigante: 40
     n_arquero: 70
     n_mago: 40
-    exp_round: 5
+    exp_round: 30
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25410,7 +25410,7 @@ MonoBehaviour:
     n_gigante: 50
     n_arquero: 80
     n_mago: 50
-    exp_round: 5
+    exp_round: 30
     rate: 1
   - esclavo1: {fileID: 0}
     esclavo2: {fileID: 0}
