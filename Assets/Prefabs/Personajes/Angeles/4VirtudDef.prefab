@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1315369997020092778}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -8.893853, y: -8.893853, z: -8.893853}
+  m_LocalPosition: {x: 0.33394, y: 1.6563, z: 1.7017}
+  m_LocalScale: {x: -16.314884, y: -16.314884, z: -16.314884}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4350925346115915475}
@@ -4988,8 +4988,8 @@ Transform:
   m_GameObject: {fileID: 2739419499016940908}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.011418, y: 0.007, z: 0.025}
+  m_LocalScale: {x: 1.2536869, y: 1.2536869, z: 1.2536869}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6915012962026064818}
@@ -5128,14 +5128,14 @@ MonoBehaviour:
   angel: {fileID: 3361137995119431050}
   targeto: {fileID: 0}
   speed: 50
-  damage: 15
+  damage: 30
   damageIni: 0
   explosionRadius: 0
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1
   Name: espada
   quemado: 0
-  sangrado: 10
+  sangrado: 20
 --- !u!4 &4574610624768986862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a38a45047b8b59f46ba1b83250b4a3c2, type: 3}
@@ -5249,14 +5249,14 @@ MonoBehaviour:
   angel: {fileID: 3361137995119431050}
   targeto: {fileID: 0}
   speed: 50
-  damage: 15
+  damage: 30
   damageIni: 0
   explosionRadius: 0
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1
   Name: espada
   quemado: 0
-  sangrado: 10
+  sangrado: 20
 --- !u!4 &4144635419890517694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a38a45047b8b59f46ba1b83250b4a3c2, type: 3}
@@ -5456,14 +5456,14 @@ MonoBehaviour:
   angel: {fileID: 3361137995119431050}
   targeto: {fileID: 0}
   speed: 50
-  damage: 15
+  damage: 30
   damageIni: 0
   explosionRadius: 0
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1
   Name: espada
   quemado: 0
-  sangrado: 10
+  sangrado: 20
 --- !u!4 &9126960571399087941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a38a45047b8b59f46ba1b83250b4a3c2, type: 3}
@@ -5577,14 +5577,14 @@ MonoBehaviour:
   angel: {fileID: 3361137995119431050}
   targeto: {fileID: 0}
   speed: 50
-  damage: 15
+  damage: 30
   damageIni: 0
   explosionRadius: 0
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1
   Name: espada
   quemado: 0
-  sangrado: 10
+  sangrado: 20
 --- !u!4 &8759548204158774108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a38a45047b8b59f46ba1b83250b4a3c2, type: 3}
