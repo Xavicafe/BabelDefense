@@ -129,7 +129,7 @@ public class soldadito : MonoBehaviour
             StartCoroutine(DamageSangrado_DamageQuemado(damage,hijo));
         }
     }
-    private void Die()
+    public void Die()
     {
         StopAllCoroutines();
         controladorSFX = GameObject.FindGameObjectWithTag("audiosfx").GetComponent<SFXController>();
