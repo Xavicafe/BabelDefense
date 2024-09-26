@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7376439710256764847}
   - component: {fileID: -5313663590353032331}
   m_Layer: 0
-  m_Name: AngelEspada
+  m_Name: 2AngelEspada
   m_TagString: angel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

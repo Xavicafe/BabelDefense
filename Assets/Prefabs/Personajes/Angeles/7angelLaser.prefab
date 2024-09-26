@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5306097118935807277}
   - component: {fileID: -5247575558548676685}
   m_Layer: 0
-  m_Name: angelLaser
+  m_Name: 7angelLaser
   m_TagString: angel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
