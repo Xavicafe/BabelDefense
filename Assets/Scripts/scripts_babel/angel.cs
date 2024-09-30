@@ -29,7 +29,6 @@ public class angel : MonoBehaviour
     
     private soldadito enemigo;
     public Transform target;
-    public string tagEnemigo = "soldados";
     public Transform partToRotate;
     public float turnSpeed = 10f;
 
@@ -84,7 +83,7 @@ public class angel : MonoBehaviour
     void UpdateTarget() {
         //Targetea al enemigo mas cercano
         GameObject[] enemiesescl = GameObject.FindGameObjectsWithTag("esclavo");
-        GameObject[] enemiessol = GameObject.FindGameObjectsWithTag(tagEnemigo);
+        GameObject[] enemiessol = GameObject.FindGameObjectsWithTag("soldados");
         GameObject[] enemiesgig = GameObject.FindGameObjectsWithTag("gigante");
         GameObject[] enemies = enemiesescl.Concat(enemiessol).ToArray();
         enemies = enemies.Concat(enemiesgig).ToArray();
@@ -232,7 +231,7 @@ public class angel : MonoBehaviour
 
     void Principado_attack(){
         GameObject[] enemiesescl = GameObject.FindGameObjectsWithTag("esclavo");
-        GameObject[] enemiessol = GameObject.FindGameObjectsWithTag(tagEnemigo);
+        GameObject[] enemiessol = GameObject.FindGameObjectsWithTag("soldados");
         GameObject[] enemiesgig = GameObject.FindGameObjectsWithTag("gigante");
         GameObject[] enemies = enemiesescl.Concat(enemiessol).ToArray();
         enemies = enemies.Concat(enemiesgig).ToArray();
@@ -271,8 +270,8 @@ public class angel : MonoBehaviour
     {
 
         espada.transform.position=PosIni;
-        espada.gameObject.SetActive(false);  
         espada.GetComponent<disparo>().targeto=null;
+        espada.gameObject.SetActive(false);          
         yield return new WaitForSeconds(3f);
         espada.gameObject.SetActive(true);
         espada.GetComponent<disparo>().IsReady=true;

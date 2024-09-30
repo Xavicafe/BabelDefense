@@ -23,12 +23,18 @@ public class disparo : MonoBehaviour
     public float quemado;
     public float sangrado;
 
+    private bool seeking=false;
+
     // Start is called before the first frame update
     void Start()
     {
         //damageIni=damage;
         PosIni=transform.position;
         
+    }
+    void OnEnable() {
+        seeking=false;
+    // Este código se ejecuta cada vez que el objeto se activa
     }
     // Update is called once per frame
     void Update()
@@ -48,6 +54,12 @@ public class disparo : MonoBehaviour
 
                 transform.Translate(dir.normalized * distanceThisFrame, Space.World);
                 transform.LookAt(targeto);
+            }
+            else{
+                IsReady=true;
+                if(seeking){
+                    angel.espada(PosIni,this.gameObject);
+                }
             }
         }
         else{
@@ -73,6 +85,7 @@ public class disparo : MonoBehaviour
 
     void HitTarget()
     {        
+        seeking=false;
         if (explosionRadius > 0f)
         {
             Explode();
@@ -115,6 +128,7 @@ public class disparo : MonoBehaviour
     }
     public void Seek(Transform _target)
     {
+        seeking = true;
         targeto = _target;
     }
     void OnDrawGizmosSelected()

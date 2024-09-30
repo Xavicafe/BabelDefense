@@ -543,7 +543,7 @@ MonoBehaviour:
   habilidades: {fileID: 0}
   habili: 0
   quemado: {fileID: 4971811851135969953, guid: 8c37a98440c9d3c4eaa6d3119ca1e170, type: 3}
-  sangrado: {fileID: 0}
+  sangrado: {fileID: 6372783306312660168, guid: 31eba03558e300a4282792b0a5a35f6a, type: 3}
 --- !u!1 &8481146477812683977
 GameObject:
   m_ObjectHideFlags: 0
