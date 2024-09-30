@@ -25118,24 +25118,6 @@ MonoBehaviour:
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
     n_esclavo: 5
-    n_soldado: 0
-    n_gigante: 0
-    n_arquero: 0
-    n_mago: 0
-    exp_round: 10
-    rate: 1
-  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
-    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
-    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
-    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
-    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
-    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
-    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
-    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
-    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 0
     n_soldado: 1
     n_gigante: 0
     n_arquero: 0
@@ -25153,7 +25135,25 @@ MonoBehaviour:
     mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
-    n_esclavo: 5
+    n_esclavo: 10
+    n_soldado: 1
+    n_gigante: 0
+    n_arquero: 0
+    n_mago: 0
+    exp_round: 10
+    rate: 1
+  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
+    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
+    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
+    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
+    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
+    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
+    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
+    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
+    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
+    Jesucristo: {fileID: 0}
+    Apostoles: {fileID: 0}
+    n_esclavo: 8
     n_soldado: 3
     n_gigante: 0
     n_arquero: 0
