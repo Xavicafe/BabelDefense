@@ -42,6 +42,7 @@ public class generador : MonoBehaviour
     void Update()
     {
         h = TotalUnidades;
+        Debug.Log("Total Unidades: " + TotalUnidades);
         if (TotalUnidades > 0) { return; }
         if (indiceOleada >= oleadas.Length) {
 
@@ -69,6 +70,7 @@ public class generador : MonoBehaviour
         countdown -= Time.deltaTime;
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        
     }
 
     IEnumerator GenerarOleada()
@@ -103,10 +105,6 @@ public class generador : MonoBehaviour
                 else{GeneradorHumanos(oleada.soldado3);} 
                 SoldadosVivos--;
             }
-            if(GigantesVivos==1){
-                GigantesVivos--;
-                GeneradorHumanos(oleada.gigante);
-            }
             if(ArquerosVivos==1){
                 ArquerosVivos--;
                 GeneradorHumanos(oleada.arquero);
@@ -117,24 +115,25 @@ public class generador : MonoBehaviour
             }
             for (int i = 1; i <= TU; i++)
             {
-                if(SoldadosVivos>0 && i % (TU / oleada.n_soldado)==0){
+                if(SoldadosVivos>0){
                     int e=(int)Random.Range(1,4);
                     if(e==1){GeneradorHumanos(oleada.soldado1);}
                     else if(e==2){GeneradorHumanos(oleada.soldado2);}
                     else{GeneradorHumanos(oleada.soldado3);} 
                     SoldadosVivos--;
                     yield return new WaitForSeconds(1f / oleada.rate);
-                }else if(GigantesVivos>0 && i % (TU / oleada.n_gigante)==0){
-                    GigantesVivos--;
+                }else if(GigantesVivos>0){
                     GeneradorHumanos(oleada.gigante);
+                    GigantesVivos--;
+                    
                     yield return new WaitForSeconds(1f / oleada.rate);
                 
-                }else if(ArquerosVivos>0 && i % (TU / oleada.n_arquero)==0){
+                }else if(ArquerosVivos>0){
                     ArquerosVivos--;
                     GeneradorHumanos(oleada.arquero);
                     yield return new WaitForSeconds(1f / oleada.rate);
                 
-                }else if(MagosVivos>0 && i % (TU / oleada.n_mago)==0){
+                }else if(MagosVivos>0){
                     MagosVivos--;
                     GeneradorHumanos(oleada.mago);
                     yield return new WaitForSeconds(1f / oleada.rate);
