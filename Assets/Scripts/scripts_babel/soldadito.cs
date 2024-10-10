@@ -45,6 +45,7 @@ public class soldadito : MonoBehaviour
         camara=Camera.main;
         dineroIni=dinero;
         vida_max=vida;
+        slider.maxValue=vida_max;
     }
     void Update()
     {   

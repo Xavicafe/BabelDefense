@@ -17,7 +17,7 @@ public class MejorasController : MonoBehaviour
     public List<GameObject> estrellas_daño;
     public List<GameObject> estrellas_cadencia;
     public List<GameObject> pisos_torre;
-    public int[] coste = {1,2,3,4,5};
+    public int[] coste = {1,2,3,4,5,6};
     public int[] coste_pisos = {1,2,3,4,5,6,7,8,9,10,11,12};
     public TMP_Text Texto_costepisos;
 
@@ -73,7 +73,7 @@ public class MejorasController : MonoBehaviour
         camara=Camera.main;
         ActualizarCandados();
         Texto_costepisos.text= coste_pisos[pas.n_pisos]+" EXP";
-        
+        Actualizar_Pisos();
 
     }
 
@@ -94,6 +94,18 @@ public class MejorasController : MonoBehaviour
         {
             ocultar_mejoras();
         } 
+    }
+
+    public void Actualizar_Pisos(){
+        if(pas.n_pisos==1){
+
+        }
+        else{
+            for(int i = 0; i<pas.n_pisos-1; i++){
+            pisos_torre[i].SetActive(true);
+        }
+        }
+        
     }
 
     public void ocultar_mejoras()
