@@ -42,7 +42,6 @@ public class generador : MonoBehaviour
     void Update()
     {
         h = TotalUnidades;
-        Debug.Log("Total Unidades: " + TotalUnidades);
         if (TotalUnidades > 0) { return; }
         if (indiceOleada >= oleadas.Length) {
 
@@ -71,6 +70,7 @@ public class generador : MonoBehaviour
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         
+        
     }
 
     IEnumerator GenerarOleada()
@@ -83,10 +83,12 @@ public class generador : MonoBehaviour
         if(oleada.Jesucristo!=null){
             GeneradorHumanos(oleada.Jesucristo);
             Debug.Log("JESUCRISTO EN MARCHA");
+            TotalUnidades = 1;
         }
         else if(oleada.Apostoles!=null){
             GeneradorHumanos(oleada.Apostoles);
             Debug.Log("APOSTOLES EN MARCHA");
+            TotalUnidades = 12;
         }
         else{
             int EsclavosVivos = oleada.n_esclavo;

@@ -25084,9 +25084,9 @@ MonoBehaviour:
     n_soldado: 0
     n_gigante: 0
     n_arquero: 0
-    n_mago: 0
+    n_mago: 10
     exp_round: 10
-    rate: 0
+    rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
     esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}

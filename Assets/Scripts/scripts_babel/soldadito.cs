@@ -166,7 +166,6 @@ public class soldadito : MonoBehaviour
         float damage=damageIni;
         while(damage>=0){
             Impacto(damageIni/10);
-            Debug.Log((habilidades.Duracion_Apocalipsis * (1+((float)habilidades.duracion_A+1)/10))/10);
             yield return new WaitForSeconds((habilidades.Duracion_Apocalipsis * (1+((float)habilidades.duracion_A+1)/10))/10);
             damage-=damageIni/10;
         }

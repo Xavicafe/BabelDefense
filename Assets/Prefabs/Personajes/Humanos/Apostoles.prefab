@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6791993307701105035}
   m_Layer: 0
   m_Name: ApostolTipo3OBJETO (2)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 6887400841143703595}
   m_Layer: 0
   m_Name: ApostolTipo3OBJETO
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2791,7 +2791,7 @@ GameObject:
   - component: {fileID: 3816811532191108439}
   m_Layer: 0
   m_Name: Apostoltipo1
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6382,7 +6382,7 @@ GameObject:
   - component: {fileID: 2811128846237143605}
   m_Layer: 0
   m_Name: ApostolTipo4Jazz
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9203,7 +9203,7 @@ GameObject:
   - component: {fileID: 8169246531050245618}
   m_Layer: 0
   m_Name: ApostolTipo4Jazz (1)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12713,7 +12713,7 @@ GameObject:
   - component: {fileID: 520460883209272361}
   m_Layer: 0
   m_Name: ApostolTipo2JazzOBJETO
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12865,7 +12865,7 @@ GameObject:
   - component: {fileID: 6936745917563742768}
   m_Layer: 0
   m_Name: ApostolTipo4Jazz (2)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14470,7 +14470,7 @@ GameObject:
   - component: {fileID: 6665513997615307561}
   m_Layer: 0
   m_Name: ApostolTipo2JazzOBJETO (1)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14750,7 +14750,7 @@ GameObject:
   - component: {fileID: 4041781616022016081}
   m_Layer: 0
   m_Name: Apostoltipo1 (2)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15773,7 +15773,7 @@ GameObject:
   - component: {fileID: 3730073087598982413}
   m_Layer: 0
   m_Name: ApostolTipo2JazzOBJETO (2)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19586,7 +19586,7 @@ GameObject:
   - component: {fileID: 797966340735423964}
   m_Layer: 0
   m_Name: ApostolTipo3OBJETO (1)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19832,7 +19832,7 @@ GameObject:
   - component: {fileID: 1916450902076522865}
   m_Layer: 0
   m_Name: Apostoltipo1 (1)
-  m_TagString: Untagged
+  m_TagString: gigante
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
