@@ -12,6 +12,10 @@ public class NodeUI : MonoBehaviour
 	public Button upgradeButton;
 	public Text textoPropiedades;
 	public Text sellAmount;
+
+	[SerializeField]
+	public List<GameObject> textosConCosteMejora;
+
 	public int[] coste = {100,150,200,250,300,350};
 
 	private Altar altarObjetivo;
@@ -32,6 +36,48 @@ public class NodeUI : MonoBehaviour
 
 	void Start(){
 		pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
+		
+	}
+	public void Ajustar_Costes(){
+		int i=0;
+		int j=0;
+		int z=0;
+		while(i<=4){
+			if(!angel.GetComponent<angel>().mejora_cadencia[i]){
+				break;
+			}
+			i++;
+		}	
+		while(j<=4){
+			if(!angel.GetComponent<angel>().mejora_daño[j]){
+				break;
+			}
+			j++;
+		}	
+		while(z<=4){
+			if(!angel.GetComponent<angel>().mejora_rango[z]){
+				break;
+			}
+			z++;
+		}
+		if(i==5){
+			textosConCosteMejora[0].GetComponent<TMP_Text>().text="MAX";
+		}
+		else{
+			textosConCosteMejora[0].GetComponent<TMP_Text>().text=coste[i].ToString();
+		}
+		if(j==5){
+			textosConCosteMejora[1].GetComponent<TMP_Text>().text="MAX";
+		}
+		else{
+			textosConCosteMejora[1].GetComponent<TMP_Text>().text=coste[j].ToString();
+		}
+		if(z==5){
+			textosConCosteMejora[2].GetComponent<TMP_Text>().text="MAX";
+		}
+		else{
+			textosConCosteMejora[2].GetComponent<TMP_Text>().text=coste[z].ToString();
+		}
 	}
 
 	public void SetTarget(Altar target)
@@ -46,6 +92,7 @@ public class NodeUI : MonoBehaviour
 							 "\n Daño en Area: " + datosAngel.DañoDeArea + "\n Slow: " + datosAngel.Slow;*/
 		Adaptar();
 		Ajustar_Candados();
+		Ajustar_Costes();
 		if (!altarObjetivo.isUpgraded)
         {
             upgradeCost.text = datosAngel.upgradeCost.ToString();
@@ -174,6 +221,7 @@ public class NodeUI : MonoBehaviour
 			Debug.Log("O no tienes dinero o no tienes esta mejora desbloqueada");
 		}
 		sellAmount.text = Dinero_Venta() + "";
+		Ajustar_Costes();
 	}
 	public void mejorar_Rango(){
 		int i=0;
@@ -193,6 +241,7 @@ public class NodeUI : MonoBehaviour
 			Debug.Log("O no tienes dinero o no tienes esta mejora desbloqueada");
 		}
 		sellAmount.text = Dinero_Venta() + "";
+		Ajustar_Costes();
 	}
 	public void mejorar_Daño(){
 		int i=0;
@@ -211,6 +260,7 @@ public class NodeUI : MonoBehaviour
 			Debug.Log("O no tienes dinero o no tienes esta mejora desbloqueada");
 		}
 		sellAmount.text = Dinero_Venta() + "";
+		Ajustar_Costes();
 	}
 
 	public int Dinero_Venta(){
