@@ -4812,6 +4812,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 270618932}
+  - {fileID: 1806762933}
   m_Father: {fileID: 1553144051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01875, y: 0.111222215}
@@ -8561,10 +8562,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 145111892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.37800002, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: -0.000019073486}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.299999, y: -0.000019073486}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.49999955, y: 0.5451272}
 --- !u!114 &270618933
 MonoBehaviour:
@@ -25084,7 +25085,7 @@ MonoBehaviour:
     n_soldado: 0
     n_gigante: 0
     n_arquero: 0
-    n_mago: 10
+    n_mago: 0
     exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
@@ -25152,10 +25153,10 @@ MonoBehaviour:
     mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
-    n_esclavo: 8
-    n_soldado: 3
+    n_esclavo: 0
+    n_soldado: 0
     n_gigante: 0
-    n_arquero: 0
+    n_arquero: 5
     n_mago: 0
     exp_round: 10
     rate: 1
@@ -25171,9 +25172,9 @@ MonoBehaviour:
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
     n_esclavo: 10
-    n_soldado: 5
+    n_soldado: 3
     n_gigante: 0
-    n_arquero: 0
+    n_arquero: 10
     n_mago: 0
     exp_round: 10
     rate: 1
@@ -25206,10 +25207,10 @@ MonoBehaviour:
     mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
-    n_esclavo: 10
+    n_esclavo: 20
     n_soldado: 5
-    n_gigante: 3
-    n_arquero: 0
+    n_gigante: 1
+    n_arquero: 10
     n_mago: 0
     exp_round: 10
     rate: 1
@@ -25224,10 +25225,10 @@ MonoBehaviour:
     mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
-    n_esclavo: 15
-    n_soldado: 10
-    n_gigante: 5
-    n_arquero: 0
+    n_esclavo: 20
+    n_soldado: 20
+    n_gigante: 1
+    n_arquero: 10
     n_mago: 0
     exp_round: 10
     rate: 1
@@ -25262,9 +25263,9 @@ MonoBehaviour:
     Apostoles: {fileID: 0}
     n_esclavo: 20
     n_soldado: 10
-    n_gigante: 3
+    n_gigante: 0
     n_arquero: 0
-    n_mago: 0
+    n_mago: 3
     exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
@@ -25281,63 +25282,9 @@ MonoBehaviour:
     n_esclavo: 0
     n_soldado: 0
     n_gigante: 0
-    n_arquero: 20
-    n_mago: 0
-    exp_round: 20
-    rate: 1
-  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
-    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
-    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
-    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
-    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
-    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
-    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
-    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
-    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 0
-    n_soldado: 0
-    n_gigante: 0
-    n_arquero: 50
-    n_mago: 0
-    exp_round: 20
-    rate: 1
-  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
-    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
-    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
-    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
-    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
-    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
-    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
-    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
-    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 30
-    n_soldado: 20
-    n_gigante: 15
-    n_arquero: 40
-    n_mago: 0
-    exp_round: 20
-    rate: 1
-  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
-    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
-    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
-    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
-    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
-    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
-    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
-    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
-    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 30
-    n_soldado: 20
-    n_gigante: 15
     n_arquero: 30
-    n_mago: 10
-    exp_round: 30
+    n_mago: 0
+    exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25350,12 +25297,30 @@ MonoBehaviour:
     mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
     Jesucristo: {fileID: 0}
     Apostoles: {fileID: 0}
-    n_esclavo: 40
+    n_esclavo: 20
+    n_soldado: 20
+    n_gigante: 2
+    n_arquero: 20
+    n_mago: 5
+    exp_round: 20
+    rate: 1
+  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
+    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
+    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
+    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
+    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
+    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
+    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
+    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
+    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
+    Jesucristo: {fileID: 0}
+    Apostoles: {fileID: 0}
+    n_esclavo: 30
     n_soldado: 30
-    n_gigante: 25
-    n_arquero: 50
-    n_mago: 20
-    exp_round: 30
+    n_gigante: 3
+    n_arquero: 30
+    n_mago: 5
+    exp_round: 20
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
     esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
@@ -25366,60 +25331,6 @@ MonoBehaviour:
     gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
     arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
     mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 50
-    n_soldado: 70
-    n_gigante: 30
-    n_arquero: 60
-    n_mago: 30
-    exp_round: 30
-    rate: 1
-  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
-    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
-    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
-    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
-    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
-    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
-    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
-    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
-    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 0
-    n_soldado: 100
-    n_gigante: 40
-    n_arquero: 70
-    n_mago: 40
-    exp_round: 30
-    rate: 1
-  - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
-    esclavo2: {fileID: 5353796799511438881, guid: 6efc3e4e962a86747b666e2247342fad, type: 3}
-    esclavo3: {fileID: 530008025040079468, guid: 95166f0fb9b2e0d4a81531e0af1bff0c, type: 3}
-    soldado1: {fileID: 8398103609325953830, guid: 5b0a6d6d09bf13f4bb76d3a036190722, type: 3}
-    soldado2: {fileID: 6934416597278612636, guid: 354d70330d1a9af4c9ca723b810f28e1, type: 3}
-    soldado3: {fileID: 1891786771409649818, guid: 7e7d7cb55ab91ca438555544d68112dc, type: 3}
-    gigante: {fileID: 3965694317189705942, guid: b7ac73924015f2348833347de86ac81c, type: 3}
-    arquero: {fileID: 2445735070510359986, guid: 70d143f4a3fa8aa4e96e5d7bc5cd1e22, type: 3}
-    mago: {fileID: 607129747723501337, guid: ac3a6252526546d44843a73ed079ee39, type: 3}
-    Jesucristo: {fileID: 0}
-    Apostoles: {fileID: 0}
-    n_esclavo: 0
-    n_soldado: 120
-    n_gigante: 50
-    n_arquero: 80
-    n_mago: 50
-    exp_round: 30
-    rate: 1
-  - esclavo1: {fileID: 0}
-    esclavo2: {fileID: 0}
-    esclavo3: {fileID: 0}
-    soldado1: {fileID: 0}
-    soldado2: {fileID: 0}
-    soldado3: {fileID: 0}
-    gigante: {fileID: 0}
-    arquero: {fileID: 0}
-    mago: {fileID: 0}
     Jesucristo: {fileID: 6113067041268411103, guid: 49ced7394928b3145a16f7918f379cf3, type: 3}
     Apostoles: {fileID: 0}
     n_esclavo: 0
@@ -25427,7 +25338,7 @@ MonoBehaviour:
     n_gigante: 0
     n_arquero: 0
     n_mago: 0
-    exp_round: 200
+    exp_round: 100
     rate: 1
   indiceOleada: 0
   spawnPoint1: {fileID: 2057817560}
@@ -60192,6 +60103,81 @@ MonoBehaviour:
   generador: {fileID: 671658234}
   posfin: {x: 0, y: 0, z: 0}
   velocidad: 50
+--- !u!1 &1806762932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806762933}
+  - component: {fileID: 1806762935}
+  - component: {fileID: 1806762934}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1806762933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806762932}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0001}
+  m_LocalScale: {x: 0.85858, y: 0.85858, z: 0.85858}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 145111892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.24075693, y: 0.33259672}
+  m_AnchorMax: {x: 0.37800002, y: 0.6673869}
+  m_AnchoredPosition: {x: -0.20000076, y: -0.19999981}
+  m_SizeDelta: {x: 10.13604, y: 8.889099}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1806762934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806762932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: be80ec49e12cd1e4bafc042372e6ca38, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1806762935
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806762932}
+  m_CullTransparentMesh: 1
 --- !u!4 &1810649359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c5433fd3437f014eaef9efcdf88ca6b, type: 3}
