@@ -25083,7 +25083,7 @@ MonoBehaviour:
     n_esclavo: 1
     n_soldado: 0
     n_gigante: 0
-    n_arquero: 0
+    n_arquero: 30
     n_mago: 10
     exp_round: 10
     rate: 1
