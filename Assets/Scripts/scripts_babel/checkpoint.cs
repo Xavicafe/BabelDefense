@@ -90,7 +90,7 @@ public class checkpoint : MonoBehaviour
             generador.TotalUnidades--;
             
             if(numero>=max){
-                if (numeroPiso-1 == game_over)
+                if (numeroPiso == game_over)
                 {
                     //Quitar canvas tienda de �ngeles
                     canvas_tienda.SetActive(false);
@@ -128,7 +128,7 @@ public class checkpoint : MonoBehaviour
             generador.TotalUnidades--;
 
             if(numero>=max){
-                if (numeroPiso-1 == game_over)
+                if (numeroPiso == game_over)
                 {
                     //Quitar canvas tienda de �ngeles
                     canvas_tienda.SetActive(false);
@@ -166,7 +166,7 @@ public class checkpoint : MonoBehaviour
             generador.TotalUnidades--;
 
             if(numero>=max){
-                if (numeroPiso-1 == game_over)
+                if (numeroPiso == game_over)
                 {
                     //Quitar canvas tienda de �ngeles
                     canvas_tienda.SetActive(false);

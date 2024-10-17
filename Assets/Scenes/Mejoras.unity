@@ -7671,7 +7671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audiosource: {fileID: 627362884}
   botonvolver: {fileID: 8300000, guid: 42a8c88e49ee4d3499762952200396a3, type: 3}
-  Num_MaxPisos: 7
   text: {fileID: 250529952}
   estrellas_rango:
   - {fileID: 849104658}

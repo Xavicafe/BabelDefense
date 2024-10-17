@@ -12,8 +12,6 @@ public class MejorasController : MonoBehaviour
     public AudioClip botonvolver;
     private PassaEscenas pas;
 
-    public int Num_MaxPisos;
-
     public TMP_Text text;
     public List<GameObject> estrellas_rango;
     public List<GameObject> estrellas_daño;
@@ -103,7 +101,7 @@ public class MejorasController : MonoBehaviour
 
         }
         else{
-            for(int i = 0; i<pas.n_pisos; i++){
+            for(int i = 0; i<pas.n_pisos-1; i++){
             pisos_torre[i].SetActive(true);
         }
         }
@@ -129,7 +127,7 @@ public class MejorasController : MonoBehaviour
             comun.SetActive(false);
             Name.SetActive(false);
             text.transform.parent.gameObject.SetActive(false);
-            if(pas.n_pisos==Num_MaxPisos){
+            if(pas.n_pisos==12){
                 n_pisos.text = "MAX";
             }else{
                 n_pisos.text=pas.n_pisos.ToString();
@@ -236,14 +234,14 @@ public class MejorasController : MonoBehaviour
     }
 
     public void mejorar_pisos(){
-        if(pas.n_pisos<Num_MaxPisos && pas.experiencia>=5){
-            pisos_torre[pas.n_pisos].SetActive(true);
+        if(pas.n_pisos<12 && pas.experiencia>=5){
+            pisos_torre[pas.n_pisos-1].SetActive(true);
             pas.RemoveEXP(coste_pisos[pas.n_pisos]);
             pas.n_pisos +=1;
             n_pisos.text = pas.n_pisos.ToString();
             Texto_costepisos.text= coste_pisos[pas.n_pisos]+" EXP";
             
-            if(pas.n_pisos==Num_MaxPisos){
+            if(pas.n_pisos==12){
                 n_pisos.text = "MAX";
             }
         }

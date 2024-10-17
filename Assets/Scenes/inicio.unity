@@ -5438,7 +5438,7 @@ MonoBehaviour:
   duracion_A: 0
   damage_A: 0
   cooldown_A: 0
-  n_pisos: 0
+  n_pisos: 1
   angeles_bloqueados: 
 --- !u!1 &1883398234
 GameObject:
