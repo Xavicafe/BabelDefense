@@ -5389,7 +5389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5035f5f2de36aa04f8ba42a80e5166e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  experiencia: 1000
+  experiencia: 0
   volume: 0
   efects: 0
   fullscreen: 1
@@ -5439,7 +5439,7 @@ MonoBehaviour:
   damage_A: 0
   cooldown_A: 0
   n_pisos: 0
-  angeles_bloqueados: 
+  angeles_bloqueados: 0000000000000000
 --- !u!1 &1883398234
 GameObject:
   m_ObjectHideFlags: 0

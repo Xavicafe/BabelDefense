@@ -25052,7 +25052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603182cf2bee0c34fbb4a3eaf39f4072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 2000
+  startMoney: 200
   VidasIniciales: 20
 --- !u!114 &736150426
 MonoBehaviour:
@@ -25083,8 +25083,8 @@ MonoBehaviour:
     n_esclavo: 1
     n_soldado: 0
     n_gigante: 0
-    n_arquero: 30
-    n_mago: 10
+    n_arquero: 0
+    n_mago: 0
     exp_round: 10
     rate: 1
   - esclavo1: {fileID: 8846114122576255196, guid: 015de454f904cd940bbc57969eb6adce, type: 3}
@@ -72066,7 +72066,6 @@ SceneRoots:
   - {fileID: 2056115090}
   - {fileID: 234909030}
   - {fileID: 1436376881}
-  - {fileID: 1328419056}
   - {fileID: 1365151583}
   - {fileID: 1112358986}
   - {fileID: 1186323259}
@@ -72089,3 +72088,4 @@ SceneRoots:
   - {fileID: 1387718080}
   - {fileID: 1792273108}
   - {fileID: 1453036432}
+  - {fileID: 1328419056}

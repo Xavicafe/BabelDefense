@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class PassaEscenas : Singleton<PassaEscenas>
 {
     public float experiencia=0; 
-    public float volume;
-    public float efects;
+    public float volume = 1;
+    public float efects = 1;
     public bool fullscreen;
 
     //angel simple
