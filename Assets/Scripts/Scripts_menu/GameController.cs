@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour
             //El juego est� activo
             Time.timeScale = 1f;
             canvas_interfaz.SetActive(false);
+            menuPausaActivo = false;
         }
 
         if (!juegoActivo)
@@ -54,6 +55,7 @@ public class GameController : MonoBehaviour
             //El juego no est� activo
             Time.timeScale = 0f;
             canvas_interfaz.SetActive(true);
+            menuPausaActivo=true;
         }
     }
 
