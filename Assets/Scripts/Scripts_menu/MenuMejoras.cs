@@ -10,10 +10,14 @@ public class MenuMejoras : MonoBehaviour
     public AudioSource audiosource;
     public AudioClip botonvolver;
 
+    void Start(){
+        audiosource.PlayOneShot(botonvolver);
+    }
     public void Cambiar_A_Mejoras(){
 
-        SceneManager.LoadScene("Mejoras");
         audiosource.PlayOneShot(botonvolver);
+        SceneManager.LoadScene("Mejoras");
+        
 
     }
 

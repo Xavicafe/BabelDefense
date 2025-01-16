@@ -141,11 +141,6 @@ private void ActualizarListaAngeles()
     angeles_bloqueados[7] = block_serafin;
 }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void AddEXP(int exp)
     {

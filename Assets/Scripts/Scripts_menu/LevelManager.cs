@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
             Debug.Log("Esperando a que PassaEscenas esté inicializado...");
             yield return null; // Espera un frame antes de volver a intentar
         }
-
+        
         // Una vez que se encuentra y está inicializado, asigna y continúa
         pas = PassaEscenas.Instance;
 

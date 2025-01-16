@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
         juegoActivo = true;
         menuPausaActivo = false;
         Time.timeScale = 1f;
+        audiosource.PlayOneShot(botonVolver);
     }
     void Update()
     {

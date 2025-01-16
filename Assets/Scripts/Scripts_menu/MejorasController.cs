@@ -9,6 +9,7 @@ public class MejorasController : MonoBehaviour
 {
 
     public AudioSource audiosource;
+    public AudioSource musica;
     public AudioClip botonvolver;
     private PassaEscenas pas;
 
@@ -84,11 +85,13 @@ public class MejorasController : MonoBehaviour
 
         // Una vez que se encuentra y está inicializado, asigna y continúa
         pas = PassaEscenas.Instance;
-
+        audiosource.volume = pas.efects;
+        audiosource.PlayOneShot(botonvolver);
         camara=Camera.main;
         ActualizarCandados();
         Texto_costepisos.text= coste_pisos[pas.n_pisos]+" EXP";
         Actualizar_Pisos();
+        musica.volume = pas.volume;
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
