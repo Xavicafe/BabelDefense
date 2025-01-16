@@ -104,22 +104,6 @@ public class PassaEscenas : MonoBehaviour
     void Start()
 {
 
-        PlayerPrefs.SetInt("block_arcangel",1);
-
-        PlayerPrefs.SetInt("block_principado",1);
-
-        PlayerPrefs.SetInt("block_virtud",1);
-
-        PlayerPrefs.SetInt("block_potestad",1);
-
-        PlayerPrefs.SetInt("block_dominio",1);
-
-        PlayerPrefs.SetInt("block_trono",1);
-
-        PlayerPrefs.SetInt("block_querubin",1);
-
-        PlayerPrefs.SetInt("block_serafin",1);
-
     // Asegúrate de inicializar la lista aquí con valores predeterminados
     angeles_bloqueados = new List<bool>
     {
