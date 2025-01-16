@@ -17,8 +17,23 @@ public class LevelManager : MonoBehaviour
     //C�DIGO PARA GENERAR LA ESCENA DEL JUEGO
 
     void Start(){
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
+        StartCoroutine(InitializeWithPassaEscenas());
+        
+    }
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
+
         Time.timeScale = 1f;
+
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     void Update()
@@ -68,7 +83,7 @@ public class LevelManager : MonoBehaviour
         TutorialActivo = false;
         AsyncOperation scene = SceneManager.LoadSceneAsync("avance1");
         scene.allowSceneActivation = false;
-
+        pas.Guardar_datos();
         while (!scene.isDone)
         {
             //m_Text.text = "Tropas celestiales al" + (scene.progress * 100) + "%";
@@ -95,7 +110,7 @@ public class LevelManager : MonoBehaviour
         TutorialActivo = true;
         AsyncOperation scene = SceneManager.LoadSceneAsync("avance1");
         scene.allowSceneActivation = false;
-
+        pas.Guardar_datos();
         while (!scene.isDone)
         {
             //m_Text.text = "Tropas celestiales al" + (scene.progress * 100) + "%";
@@ -119,7 +134,7 @@ public class LevelManager : MonoBehaviour
     IEnumerator LoadSceneInicial()
     {
         yield return null;
-
+        pas.Guardar_datos();
         AsyncOperation scene = SceneManager.LoadSceneAsync("inicio");
         scene.allowSceneActivation = false;
 

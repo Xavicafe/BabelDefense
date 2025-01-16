@@ -11,14 +11,29 @@ public class OpcionesJuegoController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        opciones_activas = false;      
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();  
+        StartCoroutine(InitializeWithPassaEscenas());
+    }
+
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
+
+        opciones_activas = false;       
         GameObject.Find("Musica_fondo").GetComponent<AudioSource>().volume = pas.volume;
         GameObject.Find("AudioSFX").GetComponent<AudioSource>().volume = pas.efects;
         GameObject audiotambores = GameObject.Find("AudioTambores");
         if(audiotambores!=null){
             audiotambores.GetComponent<AudioSource>().volume = pas.volume;
         }  
+
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     // Update is called once per frame

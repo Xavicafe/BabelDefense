@@ -68,7 +68,7 @@ public class angel : MonoBehaviour
 
     private void Start()
     {
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
+        pas = PassaEscenas.Instance;
         Ajustar_max_mejoras();
         rangoIni=range;
         fireRateIni=fireRate;

@@ -47,14 +47,27 @@ public class checkpoint : MonoBehaviour
     }
     private void Start()
     {
+        StartCoroutine(InitializeWithPassaEscenas());        
+    }
+
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
+
         lvlm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<LevelManager>();
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
         camara=Camera.main;
         game_over=pas.n_pisos;
         canvas_game_over = lvlm.game_over();
         canvas_tienda = GameObject.FindGameObjectWithTag("CANVAS_TIENDA");
 
-        
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     void actualizarConstrucciones(){

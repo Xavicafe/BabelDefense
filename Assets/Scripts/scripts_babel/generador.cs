@@ -26,7 +26,19 @@ public class generador : MonoBehaviour
 
     void Start()
     {
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
+        StartCoroutine(InitializeWithPassaEscenas());        
+    }
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
+
         tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
         if(!LevelManager.TutorialActivo){
             StartCoroutine(GenerarOleada());
@@ -37,6 +49,8 @@ public class generador : MonoBehaviour
         }
         countdown = TiempoEntreOleadas;
         indiceOleada++;
+
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     void Update()

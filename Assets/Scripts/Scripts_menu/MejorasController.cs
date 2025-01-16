@@ -71,12 +71,26 @@ public class MejorasController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
+        StartCoroutine(InitializeWithPassaEscenas());    
+    }
+
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
+
         camara=Camera.main;
         ActualizarCandados();
         Texto_costepisos.text= coste_pisos[pas.n_pisos]+" EXP";
         Actualizar_Pisos();
 
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     public void ActualizarCandados(){

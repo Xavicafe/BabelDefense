@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class PassaEscenas : Singleton<PassaEscenas>
+public class PassaEscenas : MonoBehaviour
 {
     public float experiencia=0; 
     public float volume = 1;
@@ -83,16 +83,79 @@ public class PassaEscenas : Singleton<PassaEscenas>
     //torre
     public int n_pisos=1;
     public List<bool> angeles_bloqueados;
+    public bool IsInitialized { get; private set; } = false;
 
-    
+    public static PassaEscenas Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Mantener el objeto en todas las escenas
+        }
+        else
+        {
+            Destroy(gameObject); // Destruir duplicados
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
+{
+
+        PlayerPrefs.SetInt("block_arcangel",1);
+
+        PlayerPrefs.SetInt("block_principado",1);
+
+        PlayerPrefs.SetInt("block_virtud",1);
+
+        PlayerPrefs.SetInt("block_potestad",1);
+
+        PlayerPrefs.SetInt("block_dominio",1);
+
+        PlayerPrefs.SetInt("block_trono",1);
+
+        PlayerPrefs.SetInt("block_querubin",1);
+
+        PlayerPrefs.SetInt("block_serafin",1);
+
+    // Asegúrate de inicializar la lista aquí con valores predeterminados
+    angeles_bloqueados = new List<bool>
     {
-        n_pisos=1;
-        Cargar_DATOS();
-        angeles_bloqueados = new List<bool> { block_arcangel , block_principado , block_virtud , block_potestad , block_dominio , block_trono , block_querubin , block_serafin};
-    }
+        block_arcangel,
+        block_principado,
+        block_virtud,
+        block_potestad,
+        block_dominio,
+        block_trono,
+        block_querubin,
+        block_serafin
+    };
+    experiencia=0;
+    volume = 1;
+    efects = 1;
+    IsInitialized = true;
+     Debug.Log("PassaEscenas: Start ejecutado");
+    // Carga los datos después de inicializar los valores predeterminados
+    Cargar_DATOS();
+
+    // Sincroniza la lista con los datos cargados
+    ActualizarListaAngeles();
+}
+
+private void ActualizarListaAngeles()
+{
+    // Actualiza la lista para reflejar los valores actuales
+    angeles_bloqueados[0] = block_arcangel;
+    angeles_bloqueados[1] = block_principado;
+    angeles_bloqueados[2] = block_virtud;
+    angeles_bloqueados[3] = block_potestad;
+    angeles_bloqueados[4] = block_dominio;
+    angeles_bloqueados[5] = block_trono;
+    angeles_bloqueados[6] = block_querubin;
+    angeles_bloqueados[7] = block_serafin;
+}
 
     // Update is called once per frame
     void Update()

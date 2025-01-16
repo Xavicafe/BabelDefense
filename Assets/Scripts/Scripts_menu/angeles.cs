@@ -23,10 +23,25 @@ public class angeles : MonoBehaviour
     private Vector3 posini;
 
     void Start(){
+        StartCoroutine(InitializeWithPassaEscenas());
+    }
+
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
+
         posini = new Vector3(0,-3.6716e-05f,0);
         PrecioDesbloqueoAngeles = new List<int> {50,50,50,50,50,50,50,50,50};
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
         ponerAngel(0);
+
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     public void Reset_angel(){

@@ -72,27 +72,42 @@ public class habilidades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        monedas.GetComponent<ParticleSystem>().Stop();
-        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>();
-
+        StartCoroutine(InitializeWithPassaEscenas());
         
-        duracion_A = pas.duracion_A;
-        duracion_EH = pas.duracion_EH;
-        duracion_GF = pas.duracion_GF;
+    }
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas esté inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
 
-        cooldown_A = pas.cooldown_A;
-        cooldown_EH = pas.cooldown_EH;
-        cooldown_GF = pas.cooldown_GF;
+        // Una vez que se encuentra y está inicializado, asigna y continúa
+        pas = PassaEscenas.Instance;
 
-        slow_EH=pas.slow_EH;
-        daño_A = pas.damage_A;
-        amount_GF = pas.amount_GF;
+        monedas.GetComponent<ParticleSystem>().Stop();
 
-        Cooldown_Image_EH.fillAmount = 0.0f;
-        Cooldown_Image_GF.fillAmount = 0.0f;
-        Cooldown_Image_A.fillAmount = 0.0f;
+            
+            duracion_A = pas.duracion_A;
+            duracion_EH = pas.duracion_EH;
+            duracion_GF = pas.duracion_GF;
 
-        audioSource = GetComponent<AudioSource>();
+            cooldown_A = pas.cooldown_A;
+            cooldown_EH = pas.cooldown_EH;
+            cooldown_GF = pas.cooldown_GF;
+
+            slow_EH=pas.slow_EH;
+            daño_A = pas.damage_A;
+            amount_GF = pas.amount_GF;
+
+            Cooldown_Image_EH.fillAmount = 0.0f;
+            Cooldown_Image_GF.fillAmount = 0.0f;
+            Cooldown_Image_A.fillAmount = 0.0f;
+
+            audioSource = GetComponent<AudioSource>();
+
+        Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
 
     public void Activacion_EraHielo(Button but)
