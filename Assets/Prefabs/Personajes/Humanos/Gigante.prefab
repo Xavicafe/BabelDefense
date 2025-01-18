@@ -249,9 +249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 0.059
-  vida: 2000
+  vida: 1000
   vida_max: 0
-  dinero: 50
+  dinero: 100
   dineroIni: 0
   target: {x: 30.5, y: 7.25, z: 4}
   target2: {x: -15, y: 7.25, z: 5}

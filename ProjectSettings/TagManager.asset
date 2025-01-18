@@ -68,3 +68,6 @@ TagManager:
   - name: Estrellas
     uniqueID: 2532507509
     locked: 0
+  - name: icons
+    uniqueID: 945024435
+    locked: 0
