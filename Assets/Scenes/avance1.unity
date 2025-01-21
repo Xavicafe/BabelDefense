@@ -73108,6 +73108,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 58.77
       objectReference: {fileID: 0}
+    - target: {fileID: 2311327858172702290, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
+      propertyPath: AudioSourceTambores
+      value: 
+      objectReference: {fileID: 856545650}
     - target: {fileID: 2787374917970482193, guid: 0bba620197f53e445b996411c9c65ca7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.017128

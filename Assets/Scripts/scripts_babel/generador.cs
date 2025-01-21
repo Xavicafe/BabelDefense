@@ -73,7 +73,7 @@ public class generador : MonoBehaviour
         if (countdown <= 0f && TotalUnidades == 0 && tutocon.TutoFinalizado)
         {
             MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
-            scriptMusica.FinOleada();
+            
 
             StartCoroutine(GenerarOleada());
             countdown = TiempoEntreOleadas;
@@ -92,6 +92,7 @@ public class generador : MonoBehaviour
         
         MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
         scriptMusica.InicioOleada();
+        
 
         Oleada oleada = oleadas[indiceOleada];
         if(oleada.Jesucristo!=null){
@@ -165,6 +166,7 @@ public class generador : MonoBehaviour
             
             Console.WriteLine("Ronda spawneada: " + PlayerStats.Ronda);
         }
+        scriptMusica.FinOleada();
     }
 
     void GeneradorHumanos(GameObject humano)

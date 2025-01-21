@@ -6,10 +6,27 @@ public class MusicaController : MonoBehaviour
 {
     public AudioSource AudioSourceMusica;
     public AudioSource AudioSourceTambores;
+    private PassaEscenas pas;
 
     //REPRODUCE Y SINCRONIZA EL SONIDO AL PRINCIPIO DE LA ESCENA
     void Start()
     {
+        StartCoroutine(InitializeWithPassaEscenas()); 
+        pas = GameObject.FindGameObjectWithTag("pasaescena").GetComponent<PassaEscenas>(); 
+        
+    }
+
+    private IEnumerator InitializeWithPassaEscenas()
+    {
+        while (PassaEscenas.Instance == null || !PassaEscenas.Instance.IsInitialized)
+        {
+            Debug.Log("Esperando a que PassaEscenas estÃ© inicializado...");
+            yield return null; // Espera un frame antes de volver a intentar
+        }
+
+        // Una vez que se encuentra y estÃ¡ inicializado, asigna y continÃºa
+        pas = PassaEscenas.Instance;
+
         AudioSourceMusica.Play();
         StartCoroutine(SincronizarTambores());
         AudioSourceMusica.loop = true;
@@ -18,7 +35,7 @@ public class MusicaController : MonoBehaviour
 
     IEnumerator SincronizarTambores()
     {
-        //Si el tutorial está activo los tambores no sonarán
+        //Si el tutorial estï¿½ activo los tambores no sonarï¿½n
         bool tutorial = LevelManager.TutorialActivo;
         if (tutorial == true)
         {
@@ -34,7 +51,7 @@ public class MusicaController : MonoBehaviour
 
     public void FinOleada()
     {
-        StartCoroutine(FadeOut(AudioSourceTambores, 3));
+        StartCoroutine(FadeOut(AudioSourceTambores, 5));
     }
 
     public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
@@ -43,7 +60,7 @@ public class MusicaController : MonoBehaviour
 
         while (audioSource.volume > 0)
         {
-            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            audioSource.volume -= startVolume * Time.unscaledDeltaTime / FadeTime;
 
             yield return null;
         }
@@ -53,6 +70,6 @@ public class MusicaController : MonoBehaviour
 
     public void InicioOleada()
     {
-        AudioSourceTambores.volume = 1.0f;
+        AudioSourceTambores.volume = pas.volume;
     }
 }
