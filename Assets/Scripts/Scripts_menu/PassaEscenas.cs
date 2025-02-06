@@ -102,31 +102,42 @@ public class PassaEscenas : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-{
-
-    // Asegúrate de inicializar la lista aquí con valores predeterminados
-    angeles_bloqueados = new List<bool>
     {
-        block_arcangel,
-        block_principado,
-        block_virtud,
-        block_potestad,
-        block_dominio,
-        block_trono,
-        block_querubin,
-        block_serafin
-    };
-    experiencia=0;
-    volume = 1;
-    efects = 1;
-    IsInitialized = true;
-     Debug.Log("PassaEscenas: Start ejecutado");
-    // Carga los datos después de inicializar los valores predeterminados
-    Cargar_DATOS();
+        if (!PlayerPrefs.HasKey("isFirstRun"))
+        {
+            experiencia = 0;
+            volume = 1;
+            efects = 1;
+            PlayerPrefs.SetFloat("experiencia",experiencia);
+                PlayerPrefs.SetFloat("volumen",volume);
+                PlayerPrefs.SetFloat("efectos",efects);
+            Guardar_datos();
+            PlayerPrefs.SetInt("isFirstRun", 1);
+            
+            PlayerPrefs.Save();
+        }
+        // Asegúrate de inicializar la lista aquí con valores predeterminados
+        angeles_bloqueados = new List<bool>
+        {
+            block_arcangel,
+            block_principado,
+            block_virtud,
+            block_potestad,
+            block_dominio,
+            block_trono,
+            block_querubin,
+            block_serafin
+        };
+        IsInitialized = true;
+        Debug.Log("PassaEscenas: Start ejecutado");
+        // Carga los datos después de inicializar los valores predeterminados
+        Cargar_DATOS();
 
-    // Sincroniza la lista con los datos cargados
-    ActualizarListaAngeles();
+        // Sincroniza la lista con los datos cargados
+        ActualizarListaAngeles();
 }
+
+
 
 private void ActualizarListaAngeles()
 {
@@ -297,7 +308,7 @@ private void ActualizarListaAngeles()
         PlayerPrefs.SetInt("cooldown_A",cooldown_A);
 
         PlayerPrefs.SetInt("n_pisos",n_pisos);
-
+        PlayerPrefs.Save();
 
     }
     public int ConvertToInt(bool bol){
