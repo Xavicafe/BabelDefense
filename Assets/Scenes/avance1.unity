@@ -26373,6 +26373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_over: {fileID: 516404724}
+  Canvas_interfaz: {fileID: 1553144047}
+  Canvas_habilidades: {fileID: 735271187}
+  Canvas_Mapa: {fileID: 774664607}
   pas: {fileID: 0}
 --- !u!114 &736150424
 MonoBehaviour:
@@ -26796,7 +26799,11 @@ MonoBehaviour:
   spawnPoint1: {fileID: 2057817560}
   spawnPoint2: {fileID: 1490580281}
   h: 0
+  lvlm: {fileID: 0}
   canvas_victoria: {fileID: 559906406}
+  canvas_interfaz: {fileID: 0}
+  canvas_hab: {fileID: 0}
+  canvas_map: {fileID: 0}
 --- !u!114 &736150427
 MonoBehaviour:
   m_ObjectHideFlags: 0

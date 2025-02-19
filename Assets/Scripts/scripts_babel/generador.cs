@@ -17,12 +17,21 @@ public class generador : MonoBehaviour
     public Transform spawnPoint2;
     public int h = 0;
 
+    public LevelManager lvlm;
+
     public GameObject canvas_victoria;
 
     SFXController controladorSFX;
 
     private PassaEscenas pas;
     TutorialController tutocon;
+
+    [HideInInspector]
+    public GameObject canvas_interfaz;
+    [HideInInspector]
+    public GameObject canvas_hab;
+    [HideInInspector]
+    public GameObject canvas_map;
 
     void Start()
     {
@@ -38,6 +47,11 @@ public class generador : MonoBehaviour
 
         // Una vez que se encuentra y está inicializado, asigna y continúa
         pas = PassaEscenas.Instance;
+
+        lvlm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<LevelManager>();
+        canvas_interfaz = lvlm.GetCanvas_interfaz();
+        canvas_hab = lvlm.GetCanvas_habilidades();
+        canvas_map = lvlm.GetCanvas_Mapa();
 
         tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
         if(!LevelManager.TutorialActivo){
@@ -62,6 +76,10 @@ public class generador : MonoBehaviour
         if (indiceOleada >= oleadas.Length) {
 
             canvas_victoria.SetActive(true);
+            
+            canvas_interfaz.SetActive(false);
+            canvas_hab.SetActive(false);
+            canvas_map.SetActive(false);
             Time.timeScale = 0f;
             controladorSFX = GameObject.FindGameObjectWithTag("audiosfx").GetComponent<SFXController>();
             controladorSFX.PlayGameWin();

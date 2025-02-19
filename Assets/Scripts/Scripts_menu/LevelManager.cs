@@ -10,6 +10,9 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public static bool TutorialActivo;
     public GameObject Game_over;
+    public GameObject Canvas_interfaz;
+    public GameObject Canvas_habilidades;
+    public GameObject Canvas_Mapa;
     public PassaEscenas pas;
     
 
@@ -68,6 +71,15 @@ public class LevelManager : MonoBehaviour
 
     public GameObject game_over(){
         return Game_over;
+    }
+    public GameObject GetCanvas_interfaz(){
+        return Canvas_interfaz;
+    }
+    public GameObject GetCanvas_habilidades(){
+        return Canvas_habilidades;
+    }
+    public GameObject GetCanvas_Mapa(){
+        return Canvas_Mapa;
     }
 
 
