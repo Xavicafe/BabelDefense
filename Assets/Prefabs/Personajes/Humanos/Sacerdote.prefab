@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 20
   target: {fileID: 0}
-  curacion: 10
+  curacion: 25
   fireRate: 2
   baston: {fileID: 2384800669237818182}
   targetMaterial: {fileID: 2100000, guid: 08c90ba88eed30942bc20ee4fc38bd2b, type: 2}

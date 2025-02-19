@@ -35,8 +35,8 @@ public class habilidades : MonoBehaviour
     public int Duracion_EraHielo=20;
 
     public int Precio_GoldFury=50;
-    public int Precio_Apocalipsis=50;
-    public int Precio_EraHielo=50;
+    public int Precio_Apocalipsis=200;
+    public int Precio_EraHielo=100;
 
     public int Daño_Base_A;
     public float Slow_Base_EH;

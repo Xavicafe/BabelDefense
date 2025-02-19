@@ -342,7 +342,7 @@ MonoBehaviour:
   vel: 0.4
   vida: 100
   vida_max: 0
-  dinero: 10
+  dinero: 5
   dineroIni: 0
   target: {x: 30.5, y: 7.25, z: 4}
   target2: {x: -15, y: 7.25, z: 5}

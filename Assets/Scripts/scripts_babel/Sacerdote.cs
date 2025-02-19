@@ -10,7 +10,7 @@ public class Sacerdote : MonoBehaviour
     public float range = 5f;
     private soldadito enemigo;
     public Transform target;
-    public int curacion = 10;
+    public int curacion = 20;
 
     public float fireRate = 2f;
     private float fireCountdown = 0f;
@@ -75,7 +75,6 @@ public class Sacerdote : MonoBehaviour
         if(aliados_cerca.Count>0){
             for(int i=0; i<aliados_cerca.Count;i++){
                 if(aliados_cerca[i]==null){
-                    UpdateTarget();
                     break;
                 }
                 if(aliados_cerca[i].GetComponent<soldadito>().vida!=aliados_cerca[i].GetComponent<soldadito>().vida_max){

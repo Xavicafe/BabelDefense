@@ -135,6 +135,7 @@ public class PassaEscenas : MonoBehaviour
 
         // Sincroniza la lista con los datos cargados
         ActualizarListaAngeles();
+        PlayerPrefs.Save();
 }
 
 
