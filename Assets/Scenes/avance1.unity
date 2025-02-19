@@ -26190,8 +26190,8 @@ MonoBehaviour:
   CosteAText: {fileID: 1244674009}
   CosteGFText: {fileID: 1747018048}
   Precio_GoldFury: 50
-  Precio_Apocalipsis: 50
-  Precio_EraHielo: 50
+  Precio_Apocalipsis: 200
+  Precio_EraHielo: 100
   "Da\xF1o_Base_A": 100
   Slow_Base_EH: 0.3
   gene: {fileID: 671658234}
