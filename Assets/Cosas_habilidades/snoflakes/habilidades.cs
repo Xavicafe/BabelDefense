@@ -34,6 +34,9 @@ public class habilidades : MonoBehaviour
     public int Duracion_Apocalipsis=10;
     public int Duracion_EraHielo=20;
 
+    public TMP_Text CosteEDHText;
+    public TMP_Text CosteAText;
+    public TMP_Text CosteGFText;
     public int Precio_GoldFury=50;
     public int Precio_Apocalipsis=200;
     public int Precio_EraHielo=100;
@@ -72,6 +75,9 @@ public class habilidades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CosteEDHText.text = Precio_EraHielo.ToString();
+        CosteAText.text = Precio_Apocalipsis.ToString();
+        CosteGFText.text = Precio_GoldFury.ToString();
         StartCoroutine(InitializeWithPassaEscenas());
         
     }
