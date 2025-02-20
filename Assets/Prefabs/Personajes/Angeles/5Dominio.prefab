@@ -51,7 +51,7 @@ MonoBehaviour:
   Name: Dominio
   rangoIni: 1
   range: 40
-  fireRate: 3
+  fireRate: 4
   fireRateIni: 0
   bala: {fileID: 633729496576589690, guid: 05ef99f6f09de5848b7512e5ab060683, type: 3}
   firePoint: {fileID: 7675316821257318333}

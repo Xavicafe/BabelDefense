@@ -27,15 +27,15 @@ public class FastForward : MonoBehaviour
         {
             textoFF.text = "3X";
             Time.timeScale = 3f;
-            camara.movementSpeed1 = velocidad_camara1/4;
-            camara.movementSpeed2 = velocidad_camara2/4;
+            camara.movementSpeed1 = velocidad_camara1/3;
+            camara.movementSpeed2 = velocidad_camara2/3;
         }
         else if (Time.timeScale == 3f)
         {
             textoFF.text = "5X";
             Time.timeScale = 5f;
-            camara.movementSpeed1 = velocidad_camara1;
-            camara.movementSpeed2 = velocidad_camara2;
+            camara.movementSpeed1 = velocidad_camara1/5;
+            camara.movementSpeed2 = velocidad_camara2/5;
         }
         else if (Time.timeScale == 5f)
         {

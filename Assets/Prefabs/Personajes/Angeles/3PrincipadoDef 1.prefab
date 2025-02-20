@@ -9806,7 +9806,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   useLaser: 0
   lineRenderer: {fileID: 0}
-  damageOverTime: 5
+  damageOverTime: 10
   damageOverTimeIni: 0
   slowAmount: 0.5
   enemigos_a_rango: []

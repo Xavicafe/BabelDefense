@@ -59,6 +59,8 @@ public class angel : MonoBehaviour
     public bool[] mejora_rango={false,false,false,false,false};
 
     private float dolor;
+    private float exponencial;
+    soldadito currentEnemy;
 
     public void OnDrawGizmosSelected()
     {
@@ -211,8 +213,15 @@ public class angel : MonoBehaviour
     }
     void Laser()
     {
-        Debug.Log(damageOverTime);
-        enemigo.Impacto(damageOverTime * Time.deltaTime);
+        
+        if(currentEnemy==enemigo){
+            exponencial += exponencial * Time.deltaTime;
+        }
+        else{
+            currentEnemy = enemigo;
+            exponencial = 0.05f;
+        }
+        enemigo.Impacto(damageOverTime * Time.deltaTime + exponencial);
         enemigo.Slow(slowAmount);
 
         if (!lineRenderer.enabled)
@@ -226,6 +235,7 @@ public class angel : MonoBehaviour
         lineRenderer.SetPosition(1, target.position);
 
         Vector3 dir = firePoint.position - target.position;
+        
 
     }
 
@@ -255,7 +265,6 @@ public class angel : MonoBehaviour
         for(int i=0; i<espadas.Count;i++){
             if(espadas[i].GetComponent<disparo>().IsReady && target!=null){
                 espadas[i].GetComponent<disparo>().Seek(target);
-                Debug.Log(Vector3.Distance(target.transform.position, transform.position));
                 yield return new WaitForSeconds(creationRate);
             }
         }

@@ -5255,7 +5255,7 @@ MonoBehaviour:
   IsReady: 1
   Name: espada
   quemado: 0
-  sangrado: 40
+  sangrado: 20
 --- !u!4 &4144635419890517694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a38a45047b8b59f46ba1b83250b4a3c2, type: 3}

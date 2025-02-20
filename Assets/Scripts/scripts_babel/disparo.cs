@@ -28,7 +28,7 @@ public class disparo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //damageIni=damage;
+        damageIni=damage;
         PosIni=transform.position;
         
     }

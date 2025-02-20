@@ -51,12 +51,11 @@ MonoBehaviour:
   Name: Serafin
   rangoIni: 1
   range: 20
-  fireRate: 1
+  fireRate: 1.5
   fireRateIni: 0
   bala: {fileID: 1016738921298339861, guid: 12fe0bc572bd45e45876974ec6f2bc2e, type: 3}
   firePoint: {fileID: 518532908434693028}
   target: {fileID: 0}
-  tagEnemigo: soldados
   partToRotate: {fileID: 518532908434693028}
   turnSpeed: 10
   anim: {fileID: 0}

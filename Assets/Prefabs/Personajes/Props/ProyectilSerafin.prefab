@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angel: {fileID: 0}
   targeto: {fileID: 0}
-  speed: 20
-  damage: 90
-  damageIni: 90
+  speed: 40
+  damage: 60
+  damageIni: 60
   explosionRadius: 10
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1

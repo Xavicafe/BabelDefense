@@ -282,8 +282,8 @@ MonoBehaviour:
   angel: {fileID: 0}
   targeto: {fileID: 0}
   speed: 30
-  damage: 50
-  damageIni: 50
+  damage: 40
+  damageIni: 40
   explosionRadius: 20
   impactEffect: {fileID: 408904137312319411, guid: 01a8520d0933510489db8848ba85c384, type: 3}
   IsReady: 1
