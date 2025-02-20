@@ -105,7 +105,7 @@ public class PassaEscenas : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("isFirstRun"))
         {
-            experiencia = 0;
+            experiencia = 50;
             volume = 1;
             efects = 1;
             PlayerPrefs.SetFloat("experiencia",experiencia);
