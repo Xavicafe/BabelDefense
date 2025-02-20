@@ -134,7 +134,7 @@ public class generador : MonoBehaviour
             TotalUnidades = EsclavosVivos + SoldadosVivos + GigantesVivos + ArquerosVivos + MagosVivos;
             int TU=TotalUnidades;
             PlayerStats.Ronda++;
-            pas.AddEXP(oleada.exp_round);
+            
             if(SoldadosVivos == 1){
                 int e=(int)Random.Range(1,4);
                 if(e==1){GeneradorHumanos(oleada.soldado1);}
@@ -199,5 +199,17 @@ public class generador : MonoBehaviour
             Instantiate(humano, spawnPoint2.position, spawnPoint2.rotation);
         }
 
+    }
+
+    public int GetExperienciaTotalGanada(){
+        int expTotal = 0;
+        int expround = 0;
+        for (int i = 0; i <= indiceOleada-1; i++){
+            expround = oleadas[i].exp_round;
+            expTotal += expround;
+        }
+        expTotal -= expround;
+        return expTotal;
+            
     }
 }

@@ -15,8 +15,16 @@ public class checkpoint : MonoBehaviour
 
     public int game_over = 3;
     public GameObject canvas_tienda;
+    [HideInInspector]
     public LevelManager lvlm;
+    [HideInInspector]
     public GameObject canvas_game_over;
+    [HideInInspector]
+    public GameObject canvas_interfaz;
+    [HideInInspector]
+    public GameObject canvas_hab;
+    [HideInInspector]
+    public GameObject canvas_map;
 
     public string texto;
     public Image panel_detras_texto;
@@ -65,6 +73,9 @@ public class checkpoint : MonoBehaviour
         camara=Camera.main;
         game_over=pas.n_pisos;
         canvas_game_over = lvlm.game_over();
+        canvas_interfaz = lvlm.GetCanvas_interfaz();
+        canvas_hab = lvlm.GetCanvas_habilidades();
+        canvas_map = lvlm.GetCanvas_Mapa();
         canvas_tienda = GameObject.FindGameObjectWithTag("CANVAS_TIENDA");
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");
@@ -116,6 +127,9 @@ public class checkpoint : MonoBehaviour
                     Debug.Log("Game Over");
 
                     //Mostar canvas game over
+                    canvas_interfaz.SetActive(false);
+                    canvas_hab.SetActive(false);
+                    canvas_map.SetActive(false);
                     canvas_game_over.SetActive(true);
                 }
                 else{
@@ -154,6 +168,9 @@ public class checkpoint : MonoBehaviour
                     Debug.Log("Game Over");
 
                     //Mostar canvas game over
+                    canvas_interfaz.SetActive(false);
+                    canvas_hab.SetActive(false);
+                    canvas_map.SetActive(false);
                     canvas_game_over.SetActive(true);
                 }
                 else{
@@ -192,6 +209,9 @@ public class checkpoint : MonoBehaviour
                     Debug.Log("Game Over");
 
                     //Mostar canvas game over
+                    canvas_interfaz.SetActive(false);
+                    canvas_hab.SetActive(false);
+                    canvas_map.SetActive(false);
                     canvas_game_over.SetActive(true);
                 }
                 else{
