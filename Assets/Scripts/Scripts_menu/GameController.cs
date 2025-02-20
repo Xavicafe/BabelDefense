@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     public AudioClip botonPausa;
     public AudioClip botonVolver;
 
+    public float saveTimeScale;
+
     
 
     void Start()
@@ -46,17 +48,20 @@ public class GameController : MonoBehaviour
         {
             audiosource.PlayOneShot(botonVolver);
             //El juego est� activo
-            Time.timeScale = 1f;
+            
             canvas_interfaz.SetActive(false);
             menuPausaActivo = false;
+            Time.timeScale = saveTimeScale;
         }
 
         if (!juegoActivo)
         {
+            saveTimeScale=Time.timeScale;
             //El juego no est� activo
-            Time.timeScale = 0f;
+            
             canvas_interfaz.SetActive(true);
             menuPausaActivo=true;
+            Time.timeScale = 0f;
         }
     }
 
@@ -68,13 +73,14 @@ public class GameController : MonoBehaviour
         {
             audiosource.PlayOneShot(botonVolver);
             //El juego est� activo
-            Time.timeScale = 1f;
+            Time.timeScale = saveTimeScale;
             canvas_interfaz.SetActive(false);
             menuPausaActivo = false;
         }
 
         if (!juegoActivo)
         {
+            saveTimeScale=Time.timeScale;
             audiosource.PlayOneShot(botonPausa);
             //El juego no est� activo
             Time.timeScale = 0f;

@@ -26641,9 +26641,6 @@ MonoBehaviour:
   GoldFury2: {fileID: 1999883783}
   Apocalipsis: {fileID: 1614593779}
   Apocalipsis_rojo: {fileID: 1618301437}
-  hielo: {fileID: 8300000, guid: 377cd7682f3301c4796dd31fb7485351, type: 3}
-  dinero: {fileID: 8300000, guid: 464961ec8728e4548bd22c60ea99b3b3, type: 3}
-  helldrums: {fileID: 8300000, guid: 0301852a314fe3441a32f7e441ac570f, type: 3}
   Cooldown_Image_EH: {fileID: 1812148934}
   Cooldown_Image_GF: {fileID: 1220292048}
   Cooldown_Image_A: {fileID: 1050069747}
@@ -26832,6 +26829,7 @@ MonoBehaviour:
   audiosource: {fileID: 469299827}
   botonPausa: {fileID: 8300000, guid: aacc22b617990914280ee4f5d706a31c, type: 3}
   botonVolver: {fileID: 8300000, guid: 42a8c88e49ee4d3499762952200396a3, type: 3}
+  saveTimeScale: 0
 --- !u!114 &736150423
 MonoBehaviour:
   m_ObjectHideFlags: 0
