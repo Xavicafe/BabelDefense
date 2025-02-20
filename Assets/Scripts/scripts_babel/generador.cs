@@ -32,6 +32,8 @@ public class generador : MonoBehaviour
     public GameObject canvas_hab;
     [HideInInspector]
     public GameObject canvas_map;
+    [HideInInspector]
+    public GameObject canvas_lose;
 
     void Start()
     {
@@ -52,6 +54,7 @@ public class generador : MonoBehaviour
         canvas_interfaz = lvlm.GetCanvas_interfaz();
         canvas_hab = lvlm.GetCanvas_habilidades();
         canvas_map = lvlm.GetCanvas_Mapa();
+        canvas_lose = lvlm.game_over();
 
         tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
         if(!LevelManager.TutorialActivo){
@@ -74,7 +77,9 @@ public class generador : MonoBehaviour
         if (TotalUnidades > 0) { return; }
         
         if (indiceOleada >= oleadas.Length) {
-
+            if(canvas_lose.activeSelf){
+                return;
+            }
             canvas_victoria.SetActive(true);
             
             canvas_interfaz.SetActive(false);

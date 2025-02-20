@@ -25,6 +25,8 @@ public class checkpoint : MonoBehaviour
     public GameObject canvas_hab;
     [HideInInspector]
     public GameObject canvas_map;
+    [HideInInspector]
+    public GameObject canvas_win;
 
     public string texto;
     public Image panel_detras_texto;
@@ -76,6 +78,7 @@ public class checkpoint : MonoBehaviour
         canvas_interfaz = lvlm.GetCanvas_interfaz();
         canvas_hab = lvlm.GetCanvas_habilidades();
         canvas_map = lvlm.GetCanvas_Mapa();
+        canvas_win = lvlm.GetCanvas_Mapa();
         canvas_tienda = GameObject.FindGameObjectWithTag("CANVAS_TIENDA");
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");
@@ -130,6 +133,7 @@ public class checkpoint : MonoBehaviour
                     canvas_interfaz.SetActive(false);
                     canvas_hab.SetActive(false);
                     canvas_map.SetActive(false);
+                    canvas_win.SetActive(false);
                     canvas_game_over.SetActive(true);
                 }
                 else{
@@ -171,6 +175,7 @@ public class checkpoint : MonoBehaviour
                     canvas_interfaz.SetActive(false);
                     canvas_hab.SetActive(false);
                     canvas_map.SetActive(false);
+                    canvas_win.SetActive(false);
                     canvas_game_over.SetActive(true);
                 }
                 else{
@@ -212,6 +217,7 @@ public class checkpoint : MonoBehaviour
                     canvas_interfaz.SetActive(false);
                     canvas_hab.SetActive(false);
                     canvas_map.SetActive(false);
+                    canvas_win.SetActive(false);
                     canvas_game_over.SetActive(true);
                 }
                 else{

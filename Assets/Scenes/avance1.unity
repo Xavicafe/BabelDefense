@@ -26388,6 +26388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_over: {fileID: 516404724}
+  Game_wined: {fileID: 559906406}
   Canvas_interfaz: {fileID: 1553144047}
   Canvas_habilidades: {fileID: 735271187}
   Canvas_Mapa: {fileID: 774664607}
@@ -26819,6 +26820,7 @@ MonoBehaviour:
   canvas_interfaz: {fileID: 0}
   canvas_hab: {fileID: 0}
   canvas_map: {fileID: 0}
+  canvas_lose: {fileID: 0}
 --- !u!114 &736150427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59032,6 +59034,7 @@ MonoBehaviour:
   canvas_interfaz: {fileID: 0}
   canvas_hab: {fileID: 0}
   canvas_map: {fileID: 0}
+  canvas_win: {fileID: 0}
   texto: 
   panel_detras_texto: {fileID: 959234003}
   textElement: {fileID: 173456324}

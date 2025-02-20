@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public static bool TutorialActivo;
     public GameObject Game_over;
+    public GameObject Game_wined;
     public GameObject Canvas_interfaz;
     public GameObject Canvas_habilidades;
     public GameObject Canvas_Mapa;
@@ -80,6 +81,10 @@ public class LevelManager : MonoBehaviour
     }
     public GameObject GetCanvas_Mapa(){
         return Canvas_Mapa;
+    }
+
+    public GameObject GetCanvas_Win(){
+        return Game_wined;
     }
 
 
