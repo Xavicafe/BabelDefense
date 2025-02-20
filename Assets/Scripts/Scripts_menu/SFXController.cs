@@ -22,6 +22,10 @@ public class SFXController : MonoBehaviour
     public AudioClip ventanaTutorial;
     public AudioClip tambores;
 
+    public AudioClip hielo;
+    public AudioClip dinero;
+    public AudioClip helldrums;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,21 @@ public class SFXController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PlayHellDrums()
+    {
+        FuenteAudio.PlayOneShot(helldrums);
+    }
+
+    public void PlayHielo()
+    {
+        FuenteAudio.PlayOneShot(hielo);
+    }
+
+    public void PlayDinero()
+    {
+        FuenteAudio.PlayOneShot(dinero);
     }
 
     public void PlayConstruirPiso()

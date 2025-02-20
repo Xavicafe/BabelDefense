@@ -73,7 +73,6 @@ public class generador : MonoBehaviour
     void Update()
     {
         h = TotalUnidades;
-        Debug.Log(TotalUnidades);
         if (TotalUnidades > 0) { return; }
         
         if (indiceOleada >= oleadas.Length) {

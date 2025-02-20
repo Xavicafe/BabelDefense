@@ -12,10 +12,6 @@ public class habilidades : MonoBehaviour
     public GameObject GoldFury2;
     public GameObject Apocalipsis;
     public GameObject Apocalipsis_rojo;
-    private AudioSource audioSource;
-    public AudioClip hielo;
-    public AudioClip dinero;
-    public AudioClip helldrums;
 
     public Image Cooldown_Image_EH;
     public Image Cooldown_Image_GF;
@@ -45,6 +41,8 @@ public class habilidades : MonoBehaviour
     public float Slow_Base_EH;
 
     public gen_meteors gene;
+
+    public SFXController sfx;
 
 
     [HideInInspector]
@@ -111,7 +109,6 @@ public class habilidades : MonoBehaviour
             Cooldown_Image_GF.fillAmount = 0.0f;
             Cooldown_Image_A.fillAmount = 0.0f;
 
-            audioSource = GetComponent<AudioSource>();
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");
     }
@@ -136,8 +133,7 @@ public class habilidades : MonoBehaviour
                 // Obtén el componente Animator del objeto
                 Animator animator = EraHielo.GetComponent<Animator>();
                 animator.SetBool("Activo", true);
-                audioSource = GetComponent<AudioSource>();
-                audioSource.PlayOneShot(hielo);
+                sfx.PlayHielo();
             }
             
         }
@@ -169,8 +165,7 @@ public class habilidades : MonoBehaviour
                 // Obtén el componente Animator del objeto
                 Animator animator1 = GoldFury2.GetComponent<Animator>();
                 animator1.SetBool("Activo", true);
-                audioSource = GetComponent<AudioSource>();
-                audioSource.PlayOneShot(dinero);
+                sfx.PlayDinero();
             }
         }
         else{
@@ -202,8 +197,7 @@ public class habilidades : MonoBehaviour
                 Animator animator = Apocalipsis_rojo.GetComponent<Animator>();
                 animator.SetBool("Activo", true);
                 Apocalipsis.SetActive(true);
-                audioSource = GetComponent<AudioSource>();
-                audioSource.PlayOneShot(helldrums);
+                sfx.PlayHellDrums();
             }
         }
         else{

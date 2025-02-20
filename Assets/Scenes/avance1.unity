@@ -26666,6 +26666,7 @@ MonoBehaviour:
   "Da\xF1o_Base_A": 100
   Slow_Base_EH: 0.3
   gene: {fileID: 671658234}
+  sfx: {fileID: 2109908531}
   "da\xF1o_A": 0
   duracion_A: 0
   cooldown_A: 0
@@ -78200,9 +78201,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 410437441}
     m_Modifications:
     - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
+      propertyPath: hielo
+      value: 
+      objectReference: {fileID: 8300000, guid: 377cd7682f3301c4796dd31fb7485351, type: 3}
+    - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
+      propertyPath: dinero
+      value: 
+      objectReference: {fileID: 8300000, guid: 464961ec8728e4548bd22c60ea99b3b3, type: 3}
+    - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
       propertyPath: tambores
       value: 
       objectReference: {fileID: 8300000, guid: 3fbbaabeea2537e43b6566cef77f12e6, type: 3}
+    - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
+      propertyPath: helldrums
+      value: 
+      objectReference: {fileID: 8300000, guid: 0301852a314fe3441a32f7e441ac570f, type: 3}
     - target: {fileID: 2109908531, guid: 0b5ee45d604636048bc5c5f1ce1c2673, type: 3}
       propertyPath: disparoAngel
       value: 
