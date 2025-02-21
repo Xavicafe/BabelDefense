@@ -96,7 +96,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadButton()
     {
-        if(!marca_Play){
+        if(!marca_PlayTuto && !marca_Play){
         StartCoroutine(LoadScene());
         marca_Play = true;
         }
@@ -131,7 +131,7 @@ public class LevelManager : MonoBehaviour
     public void TutorialButton()
     {
         
-        if(!marca_PlayTuto){
+        if(!marca_PlayTuto && !marca_Play){
         StartCoroutine(LoadTutorial());
         marca_PlayTuto = true;
         }
