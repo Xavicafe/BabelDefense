@@ -253,7 +253,7 @@ public class MejorasController : MonoBehaviour
     }
 
     public void mejorar_pisos(){
-        if(pas.n_pisos<Num_MaxPisos && pas.experiencia>=5){
+        if(pas.n_pisos<Num_MaxPisos && pas.experiencia>=coste_pisos[pas.n_pisos]){
             pisos_torre[pas.n_pisos].SetActive(true);
             pas.RemoveEXP(coste_pisos[pas.n_pisos]);
             pas.n_pisos +=1;
