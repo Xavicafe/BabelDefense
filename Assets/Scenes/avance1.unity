@@ -14444,7 +14444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.5729352, g: 0.9716981, b: 0.858229, a: 0.8352941}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -26650,16 +26650,16 @@ MonoBehaviour:
   IsGoldFury: 0
   IsEraHielo: 0
   IsApocalipsis: 0
-  cooldown_Todas_Hab: 20
+  cooldown_Todas_Hab: 100
   Duracion_GoldFury: 30
   Duracion_Apocalipsis: 10
   Duracion_EraHielo: 20
   CosteEDHText: {fileID: 1427313732}
   CosteAText: {fileID: 1244674009}
   CosteGFText: {fileID: 1747018048}
-  Precio_GoldFury: 50
-  Precio_Apocalipsis: 200
-  Precio_EraHielo: 100
+  Precio_GoldFury: 100
+  Precio_Apocalipsis: 400
+  Precio_EraHielo: 200
   "Da\xF1o_Base_A": 100
   Slow_Base_EH: 0.3
   gene: {fileID: 671658234}
@@ -59595,7 +59595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.990566, g: 0.28502133, b: 0.28502133, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -70893,7 +70893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.9895417, b: 0.3160377, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -77556,6 +77556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeUI: {fileID: 6866659073629848181}
   cl: {fileID: 7521546089837455622}
+  num: 0
 --- !u!1 &7521546089797319727
 GameObject:
   m_ObjectHideFlags: 0

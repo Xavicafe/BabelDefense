@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -468,8 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -2788,8 +2788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -6171,8 +6171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -8823,8 +8823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 500
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -12028,8 +12028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -13496,8 +13496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -13748,8 +13748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -14692,8 +14692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -18309,8 +18309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -18465,8 +18465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 400
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0
@@ -20367,8 +20367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bd1e3f1e56f54ba558aa5c79450b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 0.3
-  vida: 500
+  vel: 0.37
+  vida: 1000
   vida_max: 0
   dinero: 35
   dineroIni: 0

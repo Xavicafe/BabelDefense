@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 0.059
-  vida: 1000
+  vida: 1500
   vida_max: 0
   dinero: 75
   dineroIni: 0
