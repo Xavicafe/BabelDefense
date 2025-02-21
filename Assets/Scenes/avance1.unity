@@ -26848,6 +26848,9 @@ MonoBehaviour:
   Canvas_habilidades: {fileID: 735271187}
   Canvas_Mapa: {fileID: 774664607}
   pas: {fileID: 0}
+  marca_Play: 0
+  marca_PlayTuto: 0
+  marca_Inicio: 0
 --- !u!114 &736150424
 MonoBehaviour:
   m_ObjectHideFlags: 0

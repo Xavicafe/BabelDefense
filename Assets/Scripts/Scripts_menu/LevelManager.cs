@@ -15,6 +15,10 @@ public class LevelManager : MonoBehaviour
     public GameObject Canvas_habilidades;
     public GameObject Canvas_Mapa;
     public PassaEscenas pas;
+
+    public bool marca_Play;
+    public bool marca_PlayTuto;
+    public bool marca_Inicio;
     
 
 
@@ -34,7 +38,9 @@ public class LevelManager : MonoBehaviour
         
         // Una vez que se encuentra y está inicializado, asigna y continúa
         pas = PassaEscenas.Instance;
-
+        marca_Play = false;
+        marca_PlayTuto = false;
+        marca_Inicio = false;
         Time.timeScale = 1f;
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");
@@ -90,34 +96,45 @@ public class LevelManager : MonoBehaviour
 
     public void LoadButton()
     {
+        if(!marca_Play){
         StartCoroutine(LoadScene());
+        marca_Play = true;
+        }
     }
 
     IEnumerator LoadScene()
     {
-        yield return null;
-
-        TutorialActivo = false;
-        AsyncOperation scene = SceneManager.LoadSceneAsync("avance1");
-        scene.allowSceneActivation = false;
-        pas.Guardar_datos();
-        while (!scene.isDone)
-        {
-            //m_Text.text = "Tropas celestiales al" + (scene.progress * 100) + "%";
-            if (scene.progress >= 0.9f)
-            {
-                scene.allowSceneActivation = true;
-            }
-
+        
             yield return null;
-        }
+
+            TutorialActivo = false;
+            AsyncOperation scene = SceneManager.LoadSceneAsync("avance1");
+            scene.allowSceneActivation = false;
+            pas.Guardar_datos();
+            while (!scene.isDone)
+            {
+                //m_Text.text = "Tropas celestiales al" + (scene.progress * 100) + "%";
+                if (scene.progress >= 0.9f)
+                {
+                    scene.allowSceneActivation = true;
+                }
+
+                yield return null;
+            }
+        
+        
+        
     }
 
     //C�DIGO PARA GENERAR LA ESCENA DEL JUEGO CON EL TUTORIAL
 
     public void TutorialButton()
     {
+        
+        if(!marca_PlayTuto){
         StartCoroutine(LoadTutorial());
+        marca_PlayTuto = true;
+        }
     }
 
     IEnumerator LoadTutorial()
@@ -145,7 +162,11 @@ public class LevelManager : MonoBehaviour
 
     public void LoadButtonInicio()
     {
+        
+        if(!marca_Inicio){
         StartCoroutine(LoadSceneInicial());
+        marca_Inicio = true;
+        }
     }
 
     IEnumerator LoadSceneInicial()
