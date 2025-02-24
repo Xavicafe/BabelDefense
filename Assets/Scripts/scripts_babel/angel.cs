@@ -76,7 +76,7 @@ public class angel : MonoBehaviour
         fireRateIni=fireRate;
         damageOverTimeIni=damageOverTime;
         if(Name=="Principado"){
-            InvokeRepeating("Principado_attack", 0f, 0.3f);
+            InvokeRepeating("Principado_attack", 0f, 0.2f);
         }
         else{
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -251,7 +251,6 @@ public class angel : MonoBehaviour
                 float distanceToEnemy = Vector3.Distance(transform.position, enemigo.transform.position);
                 if (distanceToEnemy <= range)
                 {
-                    Debug.Log("ANGEL:"+range);
                     enemigos_a_rango.Add(enemigo);
                 }
             }

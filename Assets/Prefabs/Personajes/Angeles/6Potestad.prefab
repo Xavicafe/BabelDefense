@@ -50,7 +50,7 @@ MonoBehaviour:
   rango: 0
   Name: Potestad
   rangoIni: 1
-  range: 30
+  range: 24
   fireRate: 2
   fireRateIni: 0
   bala: {fileID: 3879784811407145793, guid: e6c0a6bd6148d1142b309c32be53d3ae, type: 3}

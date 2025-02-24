@@ -9795,7 +9795,7 @@ MonoBehaviour:
   rango: 0
   Name: Principado
   rangoIni: 1
-  range: 15
+  range: 20
   fireRate: 1
   fireRateIni: 0
   bala: {fileID: 0}
@@ -9806,7 +9806,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   useLaser: 0
   lineRenderer: {fileID: 0}
-  damageOverTime: 10
+  damageOverTime: 4
   damageOverTimeIni: 0
   slowAmount: 0.5
   enemigos_a_rango: []
