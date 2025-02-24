@@ -22,6 +22,7 @@ public class angeles : MonoBehaviour
     public List<GameObject> total_angeles;
     private Vector3 posini;
 
+public TMP_Text texto_Desbloquear;
     void Start(){
         StartCoroutine(InitializeWithPassaEscenas());
     }
@@ -38,7 +39,6 @@ public class angeles : MonoBehaviour
         pas = PassaEscenas.Instance;
 
         posini = new Vector3(0,-3.6716e-05f,0);
-        PrecioDesbloqueoAngeles = new List<int> {50,50,50,50,50,50,50,50,50};
         ponerAngel(0);
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");
@@ -359,6 +359,7 @@ public class angeles : MonoBehaviour
                 total_angeles[index].SetActive(true);
                 mejcon.comun.SetActive(false);
                 mejcon.desbloquear.SetActive(true);
+                texto_Desbloquear.text = "DESBLOQUEAR POR "+PrecioDesbloqueoAngeles[index-1]+" EXP";
             }
             else{
                 ponerAngel(index);
@@ -369,8 +370,8 @@ public class angeles : MonoBehaviour
         }
     }
     public void desbloquearangel(){
-        if(pas.experiencia>=PrecioDesbloqueoAngeles[ind]){
-            pas.experiencia = pas.experiencia-PrecioDesbloqueoAngeles[ind];
+        if(pas.experiencia>=PrecioDesbloqueoAngeles[ind-1]){
+            pas.experiencia = pas.experiencia-PrecioDesbloqueoAngeles[ind-1];
             mejcon.comun.SetActive(true);
             mejcon.desbloquear.SetActive(false);
             pas.angeles_bloqueados[ind-1]=false;

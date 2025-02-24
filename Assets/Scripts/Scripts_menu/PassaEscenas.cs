@@ -103,7 +103,7 @@ public class PassaEscenas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!PlayerPrefs.HasKey("isFirstRun"))
+        if (PlayerPrefs.HasKey("isFirstRun"))
         {
             experiencia = 50;
             volume = 1;

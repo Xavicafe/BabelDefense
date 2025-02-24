@@ -8814,7 +8814,7 @@ MonoBehaviour:
   angel: {fileID: 474280957}
   arcangel: {fileID: 783608329}
   mejcon: {fileID: 727015384}
-  PrecioDesbloqueoAngeles: 3200000032000000320000003200000032000000320000003200000064000000
+  PrecioDesbloqueoAngeles: 1e00000028000000320000003c00000046000000500000005a00000064000000
   total_angeles:
   - {fileID: 35131567}
   - {fileID: 863346935}
@@ -8825,6 +8825,7 @@ MonoBehaviour:
   - {fileID: 1866149743}
   - {fileID: 592282198}
   - {fileID: 320245039}
+  texto_Desbloquear: {fileID: 897870749}
 --- !u!114 &727015388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11075,7 +11076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DESBLOQUEAR POR 50 EXP
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc65ef5b67655f54c9a271df3735d8fb, type: 2}
   m_sharedMaterial: {fileID: 3896514603077904543, guid: fc65ef5b67655f54c9a271df3735d8fb, type: 2}
