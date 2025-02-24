@@ -26650,7 +26650,7 @@ MonoBehaviour:
   IsGoldFury: 0
   IsEraHielo: 0
   IsApocalipsis: 0
-  cooldown_Todas_Hab: 100
+  cooldown_Todas_Hab: 200
   Duracion_GoldFury: 30
   Duracion_Apocalipsis: 10
   Duracion_EraHielo: 20
