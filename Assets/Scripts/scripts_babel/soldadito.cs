@@ -185,7 +185,7 @@ public class soldadito : MonoBehaviour
         float damageIni=damage;
         while(damage>=0 && vida > 0){
             Impacto(damageIni/10);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.8f);
             damage-=damageIni/10;
         }
         Destroy(efecto);

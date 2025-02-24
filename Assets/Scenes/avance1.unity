@@ -6956,7 +6956,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RELENTIZACION
+  m_text: RALENTIZACION
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc65ef5b67655f54c9a271df3735d8fb, type: 2}
   m_sharedMaterial: {fileID: 3896514603077904543, guid: fc65ef5b67655f54c9a271df3735d8fb, type: 2}
@@ -25177,7 +25177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &682065917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56145,7 +56145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08555db2dfc624a4ca4e6fbb55848794, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.900126
+      value: 20.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08555db2dfc624a4ca4e6fbb55848794, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60731,8 +60731,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 3, y: 3, z: 1.3733859}
+  m_Center: {x: -0.000000003922124, y: 0.9999837, z: -0.81330174}
 --- !u!4 &1649709763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 08555db2dfc624a4ca4e6fbb55848794, type: 3}
@@ -77556,7 +77556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeUI: {fileID: 6866659073629848181}
   cl: {fileID: 7521546089837455622}
-  num: 0
 --- !u!1 &7521546089797319727
 GameObject:
   m_ObjectHideFlags: 0
