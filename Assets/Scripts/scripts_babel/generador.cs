@@ -49,13 +49,12 @@ public class generador : MonoBehaviour
 
         // Una vez que se encuentra y está inicializado, asigna y continúa
         pas = PassaEscenas.Instance;
-
         lvlm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<LevelManager>();
         canvas_interfaz = lvlm.GetCanvas_interfaz();
         canvas_hab = lvlm.GetCanvas_habilidades();
         canvas_map = lvlm.GetCanvas_Mapa();
         canvas_lose = lvlm.game_over();
-
+        TotalUnidades = 0;
         tutocon = GameObject.Find("GameMaster").GetComponent<TutorialController>();
         if(!LevelManager.TutorialActivo){
             StartCoroutine(GenerarOleada());
@@ -94,7 +93,8 @@ public class generador : MonoBehaviour
             Console.WriteLine("Has ganado la partida");
             this.enabled = false; 
             return; }
-        if (countdown <= 0f && TotalUnidades == 0 && tutocon.TutoFinalizado)
+
+        if (countdown <= 0f && TotalUnidades <= 0 && tutocon.TutoFinalizado)
         {
             MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
             
@@ -123,11 +123,13 @@ public class generador : MonoBehaviour
             GeneradorHumanos(oleada.Jesucristo);
             Debug.Log("JESUCRISTO EN MARCHA");
             TotalUnidades = 1;
+            PlayerStats.Ronda++;
         }
         else if(oleada.Apostoles!=null){
             GeneradorHumanos(oleada.Apostoles);
             Debug.Log("APOSTOLES EN MARCHA");
             TotalUnidades = 12;
+            PlayerStats.Ronda++;
         }
         else{
             int EsclavosVivos = oleada.n_esclavo;
@@ -188,7 +190,7 @@ public class generador : MonoBehaviour
                 }
             }
             
-            Console.WriteLine("Ronda spawneada: " + PlayerStats.Ronda);
+            Debug.Log("Ronda spawneada: " + PlayerStats.Ronda);
         }
         scriptMusica.FinOleada();
     }

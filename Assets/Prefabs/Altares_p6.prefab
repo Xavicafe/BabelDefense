@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AltarNuevo
       objectReference: {fileID: 0}
+    - target: {fileID: 2575792452421390300, guid: 7ee7d5349df127e439e07481f3a5eec3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2575792452421390301, guid: 7ee7d5349df127e439e07481f3a5eec3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -247,6 +251,10 @@ PrefabInstance:
     - target: {fileID: 2575792452421390290, guid: 7ee7d5349df127e439e07481f3a5eec3, type: 3}
       propertyPath: m_Name
       value: AltarNuevo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575792452421390300, guid: 7ee7d5349df127e439e07481f3a5eec3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2575792452421390301, guid: 7ee7d5349df127e439e07481f3a5eec3, type: 3}
       propertyPath: m_RootOrder

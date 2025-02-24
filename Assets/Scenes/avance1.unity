@@ -25177,7 +25177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &682065917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26892,7 +26892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603182cf2bee0c34fbb4a3eaf39f4072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 200
+  startMoney: 2000
   VidasIniciales: 20
 --- !u!114 &736150426
 MonoBehaviour:
