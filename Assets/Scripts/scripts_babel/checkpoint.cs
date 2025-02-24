@@ -78,7 +78,7 @@ public class checkpoint : MonoBehaviour
         canvas_interfaz = lvlm.GetCanvas_interfaz();
         canvas_hab = lvlm.GetCanvas_habilidades();
         canvas_map = lvlm.GetCanvas_Mapa();
-        canvas_win = lvlm.GetCanvas_Mapa();
+        canvas_win = lvlm.GetCanvas_Win();
         canvas_tienda = GameObject.FindGameObjectWithTag("CANVAS_TIENDA");
 
         Debug.Log("habilidades: PassaEscenas inicializado correctamente");

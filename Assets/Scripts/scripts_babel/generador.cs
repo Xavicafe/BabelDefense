@@ -86,6 +86,7 @@ public class generador : MonoBehaviour
             Time.timeScale = 0f;
             controladorSFX = GameObject.FindGameObjectWithTag("audiosfx").GetComponent<SFXController>();
             controladorSFX.PlayGameWin();
+            pas.AddEXP(GetExperienciaTotalGanada());
 
             MusicaController scriptMusica = gameObject.GetComponent<MusicaController>();
             scriptMusica.FinOleada();
