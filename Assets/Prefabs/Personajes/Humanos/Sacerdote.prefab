@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 0.4
-  vida: 100
+  vida: 500
   vida_max: 0
   dinero: 30
   dineroIni: 0

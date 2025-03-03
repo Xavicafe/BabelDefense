@@ -12021,7 +12021,7 @@ MonoBehaviour:
   vel_recta: 8
   vel_final: 4
   piso: 0
-  slider: {fileID: 5813923952013423870}
+  slider: {fileID: 1811343799518704833}
   camara: {fileID: 0}
   collider: {fileID: 7382557124909799518}
   habilidades: {fileID: 0}

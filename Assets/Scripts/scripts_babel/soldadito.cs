@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class soldadito : MonoBehaviour
 {
     public float vel = 0.4f;
-    public float vida = 100;
+    public float vida = 100f;
     public float vida_max;
     private bool marca=false;
     private bool final=false;
@@ -35,9 +35,15 @@ public class soldadito : MonoBehaviour
 
     public GameObject quemado;
     public GameObject sangrado;
+    public float aumentoVida = 0.00f;
 
     private void Start()
     {
+        generador lvlm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<generador>();
+        if(lvlm.indiceOleada>10){
+            aumentoVida = lvlm.indiceOleada/100f;
+            vida = vida * (1+ (aumentoVida*2));
+        }
         collider = GetComponent<Collider>();
         habilidades=GameObject.FindGameObjectWithTag("habilidades").GetComponent<habilidades>();
         velocidadInicial_rot = vel_rotacion;
