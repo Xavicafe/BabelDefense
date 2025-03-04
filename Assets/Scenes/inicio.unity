@@ -630,10 +630,10 @@ MonoBehaviour:
   m_text: "CR\xC9DITOS\n\n\n\nJAUME CODINA ROSELL\xD3\n\nModelado 3D\nDise\xF1o de
     Personajes\nEscenario\nDise\xF1o Gr\xE1fico\nDise\xF1o UI\nArtista 3D\n\n\n\nJAVIER
     CALATAYUD FERRE\n\nProgramaci\xF3n\nDesarrollo de Gameplay\nSistema de Oleadas\nProgramaci\xF3n
-    IA\nManejo de Escenas\nFuncionalidad de la Interfaz\nAudio\n\n\n\nFRANCISCO DONGO\n\nPrototipo
-    Inicial\n\n\n\nALBERTO L\xD3PEZ\n\nPrototipo Inicial\n\n\n\nADRI\xC1N ROCAFULL\n\nPrototipo
-    Inicial\n\n\n\nAGRADECIMIENTOS\n\n\n\nA nuestro profesor Ram\xF3n Moll\xE1 Vay\xE1\nA
-    Belkis por el apoyo durante el desarrollo\nA "
+    IA\nManejo de Escenas\nFuncionalidad de la Interfaz\nAudio\n\n\nPROTOTIPO INICIAL\n\n\nFrancisco
+    Dongo\n\nAlberto L\xF3pez\n\nAdri\xE1n Rocafull\n\n\n\n\nAGRADECIMIENTOS\n\n\n\nA
+    nuestro profesor Ram\xF3n Moll\xE1\nVay\xE1 por su gu\xEDa durante las\nprimeras
+    fases del proyecto\n\nA Belkis por el apoyo y \xE1nimo\ndurante el desarrollo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebe2739304376a44c82999e9a4a30c73, type: 2}
   m_sharedMaterial: {fileID: -7742020686364025041, guid: ebe2739304376a44c82999e9a4a30c73, type: 2}
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 10.16
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 46.83
   m_charWidthMaxAdj: 0
@@ -955,6 +955,7 @@ MonoBehaviour:
   audiosource: {fileID: 0}
   botonPausa: {fileID: 0}
   botonVolver: {fileID: 0}
+  saveTimeScale: 0
 --- !u!114 &212418142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +969,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_over: {fileID: 0}
+  Game_wined: {fileID: 0}
+  Canvas_interfaz: {fileID: 0}
+  Canvas_habilidades: {fileID: 0}
+  Canvas_Mapa: {fileID: 0}
   pas: {fileID: 0}
+  marca_Play: 0
+  marca_PlayTuto: 0
+  marca_Inicio: 0
 --- !u!1 &235838954
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,7 +6179,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_over: {fileID: 0}
+  Game_wined: {fileID: 0}
+  Canvas_interfaz: {fileID: 0}
+  Canvas_habilidades: {fileID: 0}
+  Canvas_Mapa: {fileID: 0}
   pas: {fileID: 0}
+  marca_Play: 0
+  marca_PlayTuto: 0
+  marca_Inicio: 0
 --- !u!4 &2111255063
 Transform:
   m_ObjectHideFlags: 0
